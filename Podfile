@@ -9,6 +9,7 @@ target 'MedicalAgenda' do
   pod 'VACalendar'
   pod 'RAGTextField'
   pod 'RealmSwift'
+  pod 'Alamofire'
 
 end
 
