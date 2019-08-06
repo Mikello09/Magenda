@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderWithDetail" customModule="MedicalAgenda" customModuleProvider="target">
+            <connections>
+                <outlet property="detail" destination="j9h-2a-Pgz" id="Ll0-2s-jSc"/>
+                <outlet property="title" destination="PqV-2G-RPY" id="MiF-Qy-t2e"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="750" height="128"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqV-2G-RPY">
+                    <rect key="frame" x="8" y="0.0" width="99" height="48"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                    <color key="textColor" red="0.1647058824" green="0.63921568630000003" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDK-SQ-asQ">
+                    <rect key="frame" x="8" y="127" width="149" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="lpQ-4M-pBc"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9h-2a-Pgz">
+                    <rect key="frame" x="670" y="8" width="64" height="32.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="PqV-2G-RPY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="287-zu-oo5"/>
+                <constraint firstAttribute="bottom" secondItem="mDK-SQ-asQ" secondAttribute="bottom" id="7Cu-QZ-B2R"/>
+                <constraint firstItem="j9h-2a-Pgz" firstAttribute="centerY" secondItem="PqV-2G-RPY" secondAttribute="centerY" id="8aq-1a-J8K"/>
+                <constraint firstItem="mDK-SQ-asQ" firstAttribute="trailing" secondItem="PqV-2G-RPY" secondAttribute="trailing" constant="50" id="8xy-6Z-uk9"/>
+                <constraint firstItem="mDK-SQ-asQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Edz-2X-Nyc"/>
+                <constraint firstItem="PqV-2G-RPY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UpR-70-OUL"/>
+                <constraint firstAttribute="trailing" secondItem="j9h-2a-Pgz" secondAttribute="trailing" constant="16" id="lJX-3E-pVq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="455.07246376811599" y="-77.678571428571431"/>
+        </view>
+    </objects>
+</document>

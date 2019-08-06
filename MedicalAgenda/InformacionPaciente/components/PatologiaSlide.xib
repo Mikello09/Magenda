@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PatologiaSlide" customModule="MedicalAgenda" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="553" height="216"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4CY-Yv-RYG">
+                    <rect key="frame" x="15" y="59" width="523" height="108"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patologia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFr-k9-YIP">
+                            <rect key="frame" x="10" y="39" width="503" height="30"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="sFr-k9-YIP" firstAttribute="leading" secondItem="4CY-Yv-RYG" secondAttribute="leading" constant="10" id="3R0-Iq-2L1"/>
+                        <constraint firstAttribute="trailing" secondItem="sFr-k9-YIP" secondAttribute="trailing" constant="10" id="Hv0-YP-18i"/>
+                        <constraint firstItem="sFr-k9-YIP" firstAttribute="centerX" secondItem="4CY-Yv-RYG" secondAttribute="centerX" id="ZTX-zY-DG9"/>
+                        <constraint firstItem="sFr-k9-YIP" firstAttribute="centerY" secondItem="4CY-Yv-RYG" secondAttribute="centerY" id="nfa-US-dQF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4CY-Yv-RYG" secondAttribute="trailing" constant="15" id="KiK-2h-nRG"/>
+                <constraint firstItem="4CY-Yv-RYG" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="Kju-5l-pSi"/>
+                <constraint firstItem="4CY-Yv-RYG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="mKu-db-h06"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4CY-Yv-RYG" secondAttribute="bottom" constant="15" id="q42-25-MNl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="contentView" destination="4CY-Yv-RYG" id="cAg-Z8-yuD"/>
+                <outlet property="patologiaLabel" destination="sFr-k9-YIP" id="ikz-O9-Zh6"/>
+            </connections>
+            <point key="canvasLocation" x="238.40579710144928" y="346.875"/>
+        </view>
+    </objects>
+</document>

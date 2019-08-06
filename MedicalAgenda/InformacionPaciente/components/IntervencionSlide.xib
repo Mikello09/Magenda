@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="IntervencionSlide" customModule="MedicalAgenda" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="684" height="323"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8X6-jA-iWv">
+                    <rect key="frame" x="15" y="59" width="654" height="215"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0a-xB-Z22">
+                            <rect key="frame" x="10" y="92.5" width="634" height="30"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uT-u0-bGh">
+                            <rect key="frame" x="0.0" y="0.0" width="654" height="215"/>
+                            <connections>
+                                <action selector="goToIntervencionDetails:" destination="iN0-l3-epB" eventType="touchUpInside" id="YZD-bJ-Lxp"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="q0a-xB-Z22" firstAttribute="centerX" secondItem="8X6-jA-iWv" secondAttribute="centerX" id="38A-l3-g1B"/>
+                        <constraint firstItem="2uT-u0-bGh" firstAttribute="leading" secondItem="8X6-jA-iWv" secondAttribute="leading" id="7wy-my-orN"/>
+                        <constraint firstAttribute="trailing" secondItem="2uT-u0-bGh" secondAttribute="trailing" id="CjX-9t-0kI"/>
+                        <constraint firstAttribute="bottom" secondItem="2uT-u0-bGh" secondAttribute="bottom" id="RZL-aI-FUg"/>
+                        <constraint firstItem="2uT-u0-bGh" firstAttribute="top" secondItem="8X6-jA-iWv" secondAttribute="top" id="X3c-s2-or9"/>
+                        <constraint firstItem="q0a-xB-Z22" firstAttribute="leading" secondItem="8X6-jA-iWv" secondAttribute="leading" constant="10" id="bxJ-bH-a0f"/>
+                        <constraint firstAttribute="trailing" secondItem="q0a-xB-Z22" secondAttribute="trailing" constant="10" id="crm-3b-yy8"/>
+                        <constraint firstItem="q0a-xB-Z22" firstAttribute="centerY" secondItem="8X6-jA-iWv" secondAttribute="centerY" id="k2n-i6-CR3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="8X6-jA-iWv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="IMU-zo-Obh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8X6-jA-iWv" secondAttribute="trailing" constant="15" id="PVN-3Y-b4H"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8X6-jA-iWv" secondAttribute="bottom" constant="15" id="XjW-m2-1Zm"/>
+                <constraint firstItem="8X6-jA-iWv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="ap6-Ah-QD0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="contentView" destination="8X6-jA-iWv" id="Uj3-G4-peU"/>
+                <outlet property="intervencionLabel" destination="q0a-xB-Z22" id="Ers-YC-gtR"/>
+            </connections>
+            <point key="canvasLocation" x="-65.217391304347828" y="98.772321428571431"/>
+        </view>
+    </objects>
+</document>
