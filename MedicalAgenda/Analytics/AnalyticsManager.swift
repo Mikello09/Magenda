@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class AnalyticsManager{
     
@@ -21,5 +22,32 @@ class AnalyticsManager{
         let url = URL(string: "https:8080-dot-8275646-dot-devshell.appspot.com/?authuser=0")
         
     }
+    
+    func getData() {
+        guard let url = URL(string: "https://magenda.appspot.com") else {
+            print("ERROR en URL")
+            return
+        }
+        Alamofire.request(url,
+                          method: .put)
+            .validate()
+            .responseJSON { response in
+                print("RESPONSE: \(response)")
+                //                guard response.result.isSuccess else {
+                //                    print("Error while fetching remote rooms: \(String(describing: response.result.error))")
+                //
+                //                    return
+                //                }
+                
+                //                guard let value = response.result.value as? [String: Any],
+                //                    let rows = value["rows"] as? [[String: Any]] else {
+                //                        print("Malformed data received from fetchAllRooms service")
+                //
+                //                        return
+                //                }
+        }
+    }
+    
+    
     
 }
