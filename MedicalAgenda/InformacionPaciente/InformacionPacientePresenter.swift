@@ -31,7 +31,21 @@ class InformacionPacientePresenter: IntervencionSlideProtocol, PruebasSlideProto
     
     var vc: CustomCollectionViewController!
     
-    
+    func eliminarPaciente(){
+        let paciente = realm.objects(Paciente.self).filter("numeroHistoria == %@", pacienteModel.nHistoria)
+        let intervencionesQuirurgicas = realm.objects(IntervencionQuirurgica.self).filter("id == %@", pacienteModel.nHistoria)
+        let pruebas = realm.objects(Prueba.self).filter("id == %@", pacienteModel.nHistoria)
+        let revisiones = realm.objects(Revisar.self).filter("id == %@", pacienteModel.nHistoria)
+        let siguientesCitas = realm.objects(SiguienteCita.self).filter("id == %@", pacienteModel.nHistoria)
+        
+        try! realm.write {
+            realm.delete(paciente)
+            realm.delete(intervencionesQuirurgicas)
+            realm.delete(pruebas)
+            realm.delete(revisiones)
+            realm.delete(siguientesCitas)
+        }
+    }
     
     func getPaciente() -> Paciente{
         return realm.objects(Paciente.self).filter("numeroHistoria == %@", pacienteModel.nHistoria)[0]

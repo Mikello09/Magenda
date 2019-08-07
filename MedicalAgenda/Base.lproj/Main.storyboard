@@ -4756,11 +4756,23 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojm-n0-6Es">
+                                        <rect key="frame" x="304" y="5" width="55" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Eliminar">
+                                            <color key="titleColor" red="0.84476198186528495" green="0.14083308740061234" blue="0.05837924041269988" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="eliminarClicked:" destination="Vlt-8R-FpO" eventType="touchUpInside" id="XsF-GQ-dYO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="4jj-1g-gLL"/>
+                                    <constraint firstItem="Ojm-n0-6Es" firstAttribute="centerY" secondItem="Hvu-p1-HDB" secondAttribute="centerY" id="6Rd-5V-doa"/>
                                     <constraint firstItem="9d7-AX-xmU" firstAttribute="leading" secondItem="Hvu-p1-HDB" secondAttribute="leading" constant="8" id="9GK-Dd-haO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ojm-n0-6Es" secondAttribute="trailing" constant="16" id="9L3-VP-Rn9"/>
                                     <constraint firstItem="ODK-a5-DdD" firstAttribute="top" secondItem="9d7-AX-xmU" secondAttribute="bottom" constant="3" id="B1V-0r-qO5"/>
                                     <constraint firstItem="ODK-a5-DdD" firstAttribute="leading" secondItem="Hvu-p1-HDB" secondAttribute="leading" constant="16" id="R1h-Pi-t9H"/>
                                     <constraint firstItem="9d7-AX-xmU" firstAttribute="top" secondItem="Hvu-p1-HDB" secondAttribute="top" constant="3" id="aHm-4M-IYI"/>
