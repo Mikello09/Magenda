@@ -78,7 +78,7 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func bindView(){
-        //editArray
+        //General
         var indexNHistoria = -1
         var indexName = -1
         for (i,filter) in filtrosPrecargados.enumerated(){
@@ -88,7 +88,9 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         editArray = [
             Filter(tipo: "nHistoria", value: indexNHistoria == -1 ? "" : filtrosPrecargados[indexNHistoria].value, selected: false),
             Filter(tipo: "nombre", value: indexName == -1 ? "" : filtrosPrecargados[indexName].value, selected: false),
-            Filter(tipo: "intervenido", value: "Intervenido", selected: false)]
+            Filter(tipo: "intervenidoSi", value: "Intervenido SI", selected: filtrosPrecargados.contains(where: {$0.tipo == "intervenidoSi"})),
+            Filter(tipo: "intervenidoNo", value: "Intervenido NO", selected: filtrosPrecargados.contains(where: {$0.tipo == "intervenidoNo"}))]
+        
         //Pruebas
         let resultsPruebas = realm.objects(PruebasRealm.self)
         for result in resultsPruebas {
@@ -100,6 +102,7 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
             }
         }
+        
         //iq
         let resultsIQ = realm.objects(IQRealm.self)
         for result in resultsIQ {
@@ -111,6 +114,7 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
             }
         }
+        
         //patologia
         let resultsPatologias = realm.objects(Patologias.self)
         for result in resultsPatologias {
@@ -133,8 +137,6 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
             selectedCollection.isHidden = false
             selectedCollection.reloadData()
         }
-        
-        
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -236,7 +238,9 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.mainView.backgroundColor = colorIQ
         case "patologia":
             cell.mainView.backgroundColor = colorPatologia
-        case "intervenido":
+        case "intervenidoSi":
+            cell.mainView.backgroundColor = colorGeneral
+        case "intervenidoNo":
             cell.mainView.backgroundColor = colorGeneral
         default:
             cell.mainView.backgroundColor = UIColor.black
