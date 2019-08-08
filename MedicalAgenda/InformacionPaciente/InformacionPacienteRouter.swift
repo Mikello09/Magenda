@@ -14,13 +14,6 @@ class InformacionPacienteRouter{
     
     func goToInformacionPaciente(navigationController: UINavigationController?, nHistoria: String){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        /*let vc = storyboard.instantiateViewController(withIdentifier: "informacionPacienteStoryBoard") as! InformacionPacienteViewController
-        let presenter = InformacionPacientePresenter()
-        presenter.viewController = vc
-        vc.presenter = presenter
-        vc.nHistoria = nHistoria
-        navigationController?.pushViewController(vc, animated: true)*/
-        
         let vc = storyboard.instantiateViewController(withIdentifier: "customCollectionViewControllerStoryBoard") as! CustomCollectionViewController
         let presenter = InformacionPacientePresenter()
         presenter.vc = vc
@@ -28,5 +21,4 @@ class InformacionPacienteRouter{
         vc.nHistoria = nHistoria
         navigationController?.pushViewController(vc, animated: true)
     }
-    
 }

@@ -22,12 +22,11 @@ enum SlideType: String {
     case cita = "Cita"
 }
 
-class InformacionPacientePresenter: IntervencionSlideProtocol, PruebasSlideProtocol, RevisionesProtocol, CitaSlideProtocol {
+class InformacionPacientePresenter{
     
     
     var realm = try! Realm()
     var pacienteModel: PacienteModel = PacienteModel()
-    var viewController: InformacionPacienteViewController!
     
     var vc: CustomCollectionViewController!
     
@@ -100,112 +99,6 @@ class InformacionPacientePresenter: IntervencionSlideProtocol, PruebasSlideProto
             pacienteModel.siguienteCita.append(scModel)
         }
     }
-    
-    func getSlides(type: SlideType) -> [UIView]{
-        switch type {
-        case .patologia:
-            return getPatologiaSliders()
-        case .intervencion:
-            return getIntervencionSliders()
-        case .prueba:
-            return getPruebasSlider()
-        case .revision:
-            return getRevisionesSlider()
-        case .cita:
-            return getCitasSlider()
-        }
-    }
-    
-    //CITAS
-    func getCitasSlider() -> [CitaSlide]{
-        var citaSlideArray = [CitaSlide]()
-        for (i,cita) in pacienteModel.siguienteCita.enumerated(){
-            let citaSlide: CitaSlide = Bundle.main.loadNibNamed("CitaSlide", owner: viewController, options: nil)?.first as! CitaSlide
-            citaSlide.citaLabel.text = cita.notasSiguienteCita
-            citaSlide.delegate = self
-            citaSlide.idCita = i
-            citaSlideArray.append(citaSlide)
-        }
-        return citaSlideArray
-    }
-    
-    func goToCita(idCita: Int) {
-        viewController.goToCita(idCita: idCita)
-    }
-    
-    //PRUEBAS
-    func getPruebasSlider() -> [PruebasSlide]{
-        var pruebasSlideArray = [PruebasSlide]()
-        for (i,prueba) in pacienteModel.prueba.enumerated(){
-            let pruebaSlide: PruebasSlide = Bundle.main.loadNibNamed("PruebasSlide", owner: viewController, options: nil)?.first as! PruebasSlide
-            pruebaSlide.pruebaLabel.text = prueba.tipoPrueba
-            pruebaSlide.delegate = self
-            pruebaSlide.idPrueba = i
-            pruebasSlideArray.append(pruebaSlide)
-        }
-        return pruebasSlideArray
-    }
-    
-    func goToPruebaDetail(id: Int) {
-        viewController.goToPrueba(idPrueba: id)
-    }
-    
-    //REVISIONES
-    func getRevisionesSlider() -> [RevisionSlide]{
-        var revisionesSlideArray = [RevisionSlide]()
-        for (i, revision) in pacienteModel.revisar.enumerated(){
-            let revisionSlide: RevisionSlide = Bundle.main.loadNibNamed("RevisionSlide", owner: viewController, options: nil)?.first as! RevisionSlide
-            revisionSlide.revisionLabel.text = revision.notasRevisar
-            revisionSlide.delegate = self
-            revisionSlide.idRevision = i
-            revisionesSlideArray.append(revisionSlide)
-        }
-        return revisionesSlideArray
-    }
-    
-    func goToRevision(idRevision: Int) {
-        viewController.goToRevision(idRevision: idRevision)
-    }
-    
-    /////INTERVENCION
-    func getIntervencionSliders() -> [IntervencionSlide]{
-        var intervencionSlideArray = [IntervencionSlide]()
-        for intervencion in pacienteModel.iq{
-            let intervencionSlide:IntervencionSlide = Bundle.main.loadNibNamed("IntervencionSlide", owner: viewController, options: nil)?.first as! IntervencionSlide
-            intervencionSlide.intervencionLabel.text = intervencion.tipoIntervencion
-            intervencionSlide.intervencionId = intervencion.idIQ
-            intervencionSlide.delegate = self
-            intervencionSlideArray.append(intervencionSlide)
-        }
-        return intervencionSlideArray
-    }
-    
-    func vistoChanged(visto: Bool) {
-        //dosomething
-    }
-    
-    func goToIntervencionDetail(intervencionId: Int) {
-        viewController.intervencionClicked(intervencionId: intervencionId)
-    }
-    
-    /////PATOLOGIA
-    func getPatologiaSliders() -> [PatologiaSlide]{
-        let patologiaRealm = getPaciente().patologia
-        var patologiaSlideArray = [PatologiaSlide]()
-        if(patologiaRealm.contains("|")){
-            for p in patologiaRealm.components(separatedBy: "|"){
-                let patologiaSlide:PatologiaSlide = Bundle.main.loadNibNamed("PatologiaSlide", owner: viewController, options: nil)?.first as! PatologiaSlide
-                patologiaSlide.patologiaLabel.text = p
-                patologiaSlideArray.append(patologiaSlide)
-            }
-        }else{
-            let patologiaSlide:PatologiaSlide = Bundle.main.loadNibNamed("PatologiaSlide", owner: viewController, options: nil)?.first as! PatologiaSlide
-            patologiaSlide.patologiaLabel.text = patologiaRealm
-            patologiaSlideArray.append(patologiaSlide)
-        }
-        return patologiaSlideArray
-    }
-    
     
     func setPatologia(patologia: String){
         let p = getPaciente()
@@ -297,10 +190,4 @@ class InformacionPacientePresenter: IntervencionSlideProtocol, PruebasSlideProto
             break
         }
     }
-    
-    func guardarPatologia(patologia: String){
-        let paciente = realm.objects(Paciente.self).filter("<#T##predicate: NSPredicate##NSPredicate#>")
-    }
-    
-    
 }

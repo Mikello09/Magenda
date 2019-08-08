@@ -56,8 +56,6 @@
 		F25851E922E3B64200AD19AD /* CustomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25851E822E3B64200AD19AD /* CustomCollectionViewController.swift */; };
 		F25851EB22E3BA7000AD19AD /* CustomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25851EA22E3BA7000AD19AD /* CustomCollectionCell.swift */; };
 		F25851ED22E4896500AD19AD /* CustomCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25851EC22E4896400AD19AD /* CustomCollectionTableViewCell.swift */; };
-		F2631FDF22C1F45B00694B0B /* PatologiaSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2631FDE22C1F45B00694B0B /* PatologiaSlide.swift */; };
-		F2631FE122C1F47500694B0B /* PatologiaSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2631FE022C1F47500694B0B /* PatologiaSlide.xib */; };
 		F27B518A229E954900CD1641 /* PendientesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B5189229E954900CD1641 /* PendientesViewController.swift */; };
 		F27B518C229E95E400CD1641 /* PendientesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B518B229E95E400CD1641 /* PendientesTableViewCell.swift */; };
 		F27B518E229FB5F000CD1641 /* NavigationBarUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B518D229FB5F000CD1641 /* NavigationBarUtil.swift */; };
@@ -71,19 +69,11 @@
 		F29ACB71228EB0BD009CD689 /* IQRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29ACB70228EB0BD009CD689 /* IQRealm.swift */; };
 		F29ACB73228EC4C9009CD689 /* SeleccionarItemBotonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29ACB72228EC4C9009CD689 /* SeleccionarItemBotonClass.swift */; };
 		F2B2C0C822E7552D006DFC0F /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B2C0C722E7552D006DFC0F /* NotificationsManager.swift */; };
-		F2BDAFCF22C3672C009111C6 /* IntervencionSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BDAFCE22C3672C009111C6 /* IntervencionSlide.swift */; };
-		F2BDAFD122C3673E009111C6 /* IntervencionSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2BDAFD022C3673E009111C6 /* IntervencionSlide.xib */; };
 		F2BDAFD322C383FF009111C6 /* HeaderWithDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2BDAFD222C383FF009111C6 /* HeaderWithDetail.xib */; };
 		F2BDAFD522C38410009111C6 /* HeaderWithDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BDAFD422C38410009111C6 /* HeaderWithDetail.swift */; };
-		F2BDAFD722C4D3F0009111C6 /* PruebasSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BDAFD622C4D3F0009111C6 /* PruebasSlide.swift */; };
-		F2BDAFD922C4D3FD009111C6 /* PruebasSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2BDAFD822C4D3FD009111C6 /* PruebasSlide.xib */; };
 		F2C3F6D322CA5172004A439C /* RevisionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3F6D222CA5172004A439C /* RevisionesViewController.swift */; };
 		F2C3F6D522CA5186004A439C /* RevisionesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3F6D422CA5186004A439C /* RevisionesPresenter.swift */; };
 		F2C3F6D722CA5191004A439C /* RevisionesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3F6D622CA5191004A439C /* RevisionesRouter.swift */; };
-		F2C3F6D922CA52ED004A439C /* RevisionSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C3F6D822CA52ED004A439C /* RevisionSlide.xib */; };
-		F2C3F6DB22CA52F9004A439C /* RevisionSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3F6DA22CA52F9004A439C /* RevisionSlide.swift */; };
-		F2C3F6DD22CB43AD004A439C /* CitaSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3F6DC22CB43AD004A439C /* CitaSlide.swift */; };
-		F2C3F6DF22CB43B9004A439C /* CitaSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C3F6DE22CB43B9004A439C /* CitaSlide.xib */; };
 		F2E337AA22AA70C80084E57C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E337A922AA70C80084E57C /* BaseViewController.swift */; };
 		F2E337AC22AA83090084E57C /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E337AB22AA83090084E57C /* AuthenticationViewController.swift */; };
 		F2E9B54B22F08E9000964EA6 /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E9B54A22F08E8F00964EA6 /* SectionHeader.xib */; };
@@ -154,8 +144,6 @@
 		F25851E822E3B64200AD19AD /* CustomCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewController.swift; sourceTree = "<group>"; };
 		F25851EA22E3BA7000AD19AD /* CustomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionCell.swift; sourceTree = "<group>"; };
 		F25851EC22E4896400AD19AD /* CustomCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionTableViewCell.swift; sourceTree = "<group>"; };
-		F2631FDE22C1F45B00694B0B /* PatologiaSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatologiaSlide.swift; sourceTree = "<group>"; };
-		F2631FE022C1F47500694B0B /* PatologiaSlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatologiaSlide.xib; sourceTree = "<group>"; };
 		F27B5189229E954900CD1641 /* PendientesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendientesViewController.swift; sourceTree = "<group>"; };
 		F27B518B229E95E400CD1641 /* PendientesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendientesTableViewCell.swift; sourceTree = "<group>"; };
 		F27B518D229FB5F000CD1641 /* NavigationBarUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarUtil.swift; sourceTree = "<group>"; };
@@ -169,19 +157,11 @@
 		F29ACB70228EB0BD009CD689 /* IQRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQRealm.swift; sourceTree = "<group>"; };
 		F29ACB72228EC4C9009CD689 /* SeleccionarItemBotonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionarItemBotonClass.swift; sourceTree = "<group>"; };
 		F2B2C0C722E7552D006DFC0F /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
-		F2BDAFCE22C3672C009111C6 /* IntervencionSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervencionSlide.swift; sourceTree = "<group>"; };
-		F2BDAFD022C3673E009111C6 /* IntervencionSlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntervencionSlide.xib; sourceTree = "<group>"; };
 		F2BDAFD222C383FF009111C6 /* HeaderWithDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderWithDetail.xib; sourceTree = "<group>"; };
 		F2BDAFD422C38410009111C6 /* HeaderWithDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderWithDetail.swift; sourceTree = "<group>"; };
-		F2BDAFD622C4D3F0009111C6 /* PruebasSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebasSlide.swift; sourceTree = "<group>"; };
-		F2BDAFD822C4D3FD009111C6 /* PruebasSlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PruebasSlide.xib; sourceTree = "<group>"; };
 		F2C3F6D222CA5172004A439C /* RevisionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionesViewController.swift; sourceTree = "<group>"; };
 		F2C3F6D422CA5186004A439C /* RevisionesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionesPresenter.swift; sourceTree = "<group>"; };
 		F2C3F6D622CA5191004A439C /* RevisionesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionesRouter.swift; sourceTree = "<group>"; };
-		F2C3F6D822CA52ED004A439C /* RevisionSlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RevisionSlide.xib; sourceTree = "<group>"; };
-		F2C3F6DA22CA52F9004A439C /* RevisionSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionSlide.swift; sourceTree = "<group>"; };
-		F2C3F6DC22CB43AD004A439C /* CitaSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitaSlide.swift; sourceTree = "<group>"; };
-		F2C3F6DE22CB43B9004A439C /* CitaSlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitaSlide.xib; sourceTree = "<group>"; };
 		F2E337A922AA70C80084E57C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F2E337AB22AA83090084E57C /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		F2E9B54A22F08E8F00964EA6 /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
@@ -334,7 +314,6 @@
 				F20653D822D110AD00375F1C /* citas */,
 				F2C3F6D122CA515C004A439C /* revisiones */,
 				F207C76222C5094900D7F0E2 /* pruebas */,
-				F2825A4F22C1F35000C9ADF3 /* components */,
 				F2407A6522BA294C00786D4C /* Intervenciones */,
 				F2F9BD5D22B113EB00A9B867 /* InformacionPacienteRouter.swift */,
 				F2F9BD6122B1321100A9B867 /* InformacionPacientePresenter.swift */,
@@ -419,23 +398,6 @@
 				F2BDAFD422C38410009111C6 /* HeaderWithDetail.swift */,
 			);
 			path = Headers;
-			sourceTree = "<group>";
-		};
-		F2825A4F22C1F35000C9ADF3 /* components */ = {
-			isa = PBXGroup;
-			children = (
-				F2631FDE22C1F45B00694B0B /* PatologiaSlide.swift */,
-				F2631FE022C1F47500694B0B /* PatologiaSlide.xib */,
-				F2BDAFCE22C3672C009111C6 /* IntervencionSlide.swift */,
-				F2BDAFD022C3673E009111C6 /* IntervencionSlide.xib */,
-				F2BDAFD622C4D3F0009111C6 /* PruebasSlide.swift */,
-				F2BDAFD822C4D3FD009111C6 /* PruebasSlide.xib */,
-				F2C3F6DA22CA52F9004A439C /* RevisionSlide.swift */,
-				F2C3F6D822CA52ED004A439C /* RevisionSlide.xib */,
-				F2C3F6DC22CB43AD004A439C /* CitaSlide.swift */,
-				F2C3F6DE22CB43B9004A439C /* CitaSlide.xib */,
-			);
-			path = components;
 			sourceTree = "<group>";
 		};
 		F28D271C229E66B100948679 /* Revisar */ = {
@@ -568,17 +530,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2631FE122C1F47500694B0B /* PatologiaSlide.xib in Resources */,
 				C3D33CC0223C254D005173AD /* LaunchScreen.storyboard in Resources */,
 				F27B5193229FF1CB00CD1641 /* Header.xib in Resources */,
-				F2BDAFD122C3673E009111C6 /* IntervencionSlide.xib in Resources */,
 				C3D33CBD223C254D005173AD /* Assets.xcassets in Resources */,
-				F2C3F6DF22CB43B9004A439C /* CitaSlide.xib in Resources */,
 				F2BDAFD322C383FF009111C6 /* HeaderWithDetail.xib in Resources */,
-				F2C3F6D922CA52ED004A439C /* RevisionSlide.xib in Resources */,
 				F2E9B54B22F08E9000964EA6 /* SectionHeader.xib in Resources */,
 				F22F4EC62253B77000E627FB /* CalendarPopUpView.xib in Resources */,
-				F2BDAFD922C4D3FD009111C6 /* PruebasSlide.xib in Resources */,
 				C3D33CBB223C2549005173AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,7 +610,6 @@
 				F2F8D9C222F1CF3E00333449 /* ConfigurationNormalCell.swift in Sources */,
 				F2C3F6D522CA5186004A439C /* RevisionesPresenter.swift in Sources */,
 				C3D79D3322458BB300EB5ACE /* PacienteVC.swift in Sources */,
-				F2BDAFD722C4D3F0009111C6 /* PruebasSlide.swift in Sources */,
 				F2E337AA22AA70C80084E57C /* BaseViewController.swift in Sources */,
 				F2407A6922BA298B00786D4C /* AnadirIntervencionViewController.swift in Sources */,
 				C359360A228CB9B400765C89 /* TareasTableViewCell.swift in Sources */,
@@ -684,10 +640,8 @@
 				C359360C228E0E1500765C89 /* PruebasTableViewCell.swift in Sources */,
 				C3EA21572258A07D00DAF76F /* Patologias.swift in Sources */,
 				F29ACB6F228EB03A009CD689 /* PruebasRealm.swift in Sources */,
-				F2C3F6DD22CB43AD004A439C /* CitaSlide.swift in Sources */,
 				F2F9BD5E22B113EB00A9B867 /* InformacionPacienteRouter.swift in Sources */,
 				F2B2C0C822E7552D006DFC0F /* NotificationsManager.swift in Sources */,
-				F2BDAFCF22C3672C009111C6 /* IntervencionSlide.swift in Sources */,
 				F20653E222D24EE700375F1C /* PatologiaSelectionCell.swift in Sources */,
 				F27B518A229E954900CD1641 /* PendientesViewController.swift in Sources */,
 				F2407A7522BBD9FD00786D4C /* IntervencionDetalleViewController.swift in Sources */,
@@ -702,9 +656,7 @@
 				F2E9B55022F1A38600964EA6 /* AnimationFactory.swift in Sources */,
 				F207C76422C5096800D7F0E2 /* AnadirPruebaViewController.swift in Sources */,
 				F28D271E229E66C300948679 /* RevisarViewController.swift in Sources */,
-				F2C3F6DB22CA52F9004A439C /* RevisionSlide.swift in Sources */,
 				C3D33CB6223C2549005173AD /* AppDelegate.swift in Sources */,
-				F2631FDF22C1F45B00694B0B /* PatologiaSlide.swift in Sources */,
 				F29ACB6D228EAC27009CD689 /* PruebaCalendarioBotonClass.swift in Sources */,
 				F20653E022D237AC00375F1C /* PendientesPresenter.swift in Sources */,
 				F23CF3EA2299BDF70037D636 /* FilterEditCell.swift in Sources */,
