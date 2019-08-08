@@ -95,7 +95,6 @@
 		F2F8D9C222F1CF3E00333449 /* ConfigurationNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F8D9C122F1CF3E00333449 /* ConfigurationNormalCell.swift */; };
 		F2F8D9C422F1CF6F00333449 /* ConfigurationSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F8D9C322F1CF6F00333449 /* ConfigurationSwitchCell.swift */; };
 		F2F8D9C622F337CB00333449 /* ConfigurationTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F8D9C522F337CB00333449 /* ConfigurationTimeCell.swift */; };
-		F2F9BD5C22B1128C00A9B867 /* InformacionPacienteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9BD5B22B1128C00A9B867 /* InformacionPacienteViewController.swift */; };
 		F2F9BD5E22B113EB00A9B867 /* InformacionPacienteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9BD5D22B113EB00A9B867 /* InformacionPacienteRouter.swift */; };
 		F2F9BD6222B1321100A9B867 /* InformacionPacientePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9BD6122B1321100A9B867 /* InformacionPacientePresenter.swift */; };
 		F2F9BD6422B2365000A9B867 /* SeleccionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9BD6322B2365000A9B867 /* SeleccionRouter.swift */; };
@@ -194,7 +193,6 @@
 		F2F8D9C122F1CF3E00333449 /* ConfigurationNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationNormalCell.swift; sourceTree = "<group>"; };
 		F2F8D9C322F1CF6F00333449 /* ConfigurationSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationSwitchCell.swift; sourceTree = "<group>"; };
 		F2F8D9C522F337CB00333449 /* ConfigurationTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTimeCell.swift; sourceTree = "<group>"; };
-		F2F9BD5B22B1128C00A9B867 /* InformacionPacienteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacionPacienteViewController.swift; sourceTree = "<group>"; };
 		F2F9BD5D22B113EB00A9B867 /* InformacionPacienteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacionPacienteRouter.swift; sourceTree = "<group>"; };
 		F2F9BD6122B1321100A9B867 /* InformacionPacientePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacionPacientePresenter.swift; sourceTree = "<group>"; };
 		F2F9BD6322B2365000A9B867 /* SeleccionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionRouter.swift; sourceTree = "<group>"; };
@@ -338,7 +336,6 @@
 				F207C76222C5094900D7F0E2 /* pruebas */,
 				F2825A4F22C1F35000C9ADF3 /* components */,
 				F2407A6522BA294C00786D4C /* Intervenciones */,
-				F2F9BD5B22B1128C00A9B867 /* InformacionPacienteViewController.swift */,
 				F2F9BD5D22B113EB00A9B867 /* InformacionPacienteRouter.swift */,
 				F2F9BD6122B1321100A9B867 /* InformacionPacientePresenter.swift */,
 			);
@@ -662,7 +659,6 @@
 				C359360A228CB9B400765C89 /* TareasTableViewCell.swift in Sources */,
 				F2F8D9BE22F1A87100333449 /* ConfigurationViewController.swift in Sources */,
 				F23CF3D92296797F0037D636 /* VistoSwitchClass.swift in Sources */,
-				F2F9BD5C22B1128C00A9B867 /* InformacionPacienteViewController.swift in Sources */,
 				F23CF3E6229743840037D636 /* RangoCollectionViewCell.swift in Sources */,
 				C3D79D2E223C28A100EB5ACE /* PatologiasVC.swift in Sources */,
 				F29ACB73228EC4C9009CD689 /* SeleccionarItemBotonClass.swift in Sources */,
