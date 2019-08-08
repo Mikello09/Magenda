@@ -10,13 +10,9 @@ import Foundation
 import UIKit
 import LocalAuthentication
 
-protocol AuthProtocol{
-    func authenticated()
-}
 
 class AuthenticationViewController: BaseViewController{
     
-    var delegate: AuthProtocol?
     @IBOutlet weak var fingerButton: UIButton!
     @IBOutlet weak var fingerView: UIView!
     @IBOutlet weak var codeView: UIView!
@@ -31,7 +27,8 @@ class AuthenticationViewController: BaseViewController{
         setShadow(toView: codeView)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         if(isFirstLaunch){
             readPreferences()
         }
@@ -91,8 +88,7 @@ class AuthenticationViewController: BaseViewController{
                     
                     DispatchQueue.main.async {
                         if success {
-                            self.delegate?.authenticated()
-                            self.dismiss(animated: true, completion: nil)
+                            self.performSegue(withIdentifier: "goToPrincipal", sender: nil)
                         } else {
                             // User did not authenticate successfully, look at error and take appropriate action
                             
@@ -108,10 +104,7 @@ class AuthenticationViewController: BaseViewController{
         
         }
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC:PassCodeViewController = segue.destination as! PassCodeViewController
-        destinationVC.delegate = self
-    }
+    
     @IBAction func refrescarContrasenaClicked(_ sender: UIButton) {
         let preferences = UserDefaults.standard
         let authTypeKey = "authType"
@@ -122,9 +115,3 @@ class AuthenticationViewController: BaseViewController{
     }
 }
 
-extension AuthenticationViewController: PassCodeProtocol{
-    func passCodeAuthentication() {
-        self.delegate?.authenticated()
-        self.dismiss(animated: false, completion: nil)
-    }
-}

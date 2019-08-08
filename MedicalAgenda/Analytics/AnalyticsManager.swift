@@ -17,12 +17,6 @@ class AnalyticsManager{
     
     private init(){}
     
-    func saveData(page: String){
-        
-        let url = URL(string: "https:8080-dot-8275646-dot-devshell.appspot.com/?authuser=0")
-        
-    }
-    
     func getData() {
         guard let url = URL(string: "https://magenda.appspot.com") else {
             print("ERROR en URL")

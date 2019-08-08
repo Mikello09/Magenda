@@ -19,7 +19,7 @@ struct PreFechas {
 }
 
 
-class ViewController: BaseViewController, AuthProtocol {
+class ViewController: BaseViewController {
 
     
     @IBOutlet weak var todayView: UIView!
@@ -46,16 +46,8 @@ class ViewController: BaseViewController, AuthProtocol {
         self.tabBarController?.tabBar.isHidden = false
         NotificationsManager.shared.clearBadge()
         if !isAuthenticated {
-            performSegue(withIdentifier: "authPopUp", sender: nil)
+            //performSegue(withIdentifier: "authPopUp", sender: nil)
         }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "authPopUp"{
-            let destinationVC:AuthenticationViewController = segue.destination as! AuthenticationViewController
-            destinationVC.delegate = self
-        }
-        
     }
     
     func fbButtonPressed() {
@@ -296,16 +288,6 @@ extension ViewController: VADayViewAppearanceDelegate {
             return 2
         default:
             return -7
-        }
-    }
-    
-    func authenticated() {
-        self.isAuthenticated = true
-        if NotificationsManager.shared.fromNotifications{
-            NotificationsManager.shared.fromNotifications = false
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "tareasStoryboard") as! TareasViewController
-            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

@@ -14,9 +14,7 @@ enum ModoPassCode{
     case veterano
 }
 
-protocol PassCodeProtocol{
-    func passCodeAuthentication()
-}
+
 
 
 class PassCodeViewController: BaseViewController{
@@ -28,7 +26,6 @@ class PassCodeViewController: BaseViewController{
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var hiddenText: UITextField!
     var mode: ModoPassCode = .nuevo
-    var delegate: PassCodeProtocol?
     
     override func viewDidLoad() {
         hiddenText.becomeFirstResponder()
@@ -75,8 +72,7 @@ class PassCodeViewController: BaseViewController{
             let passCodeKey = "passCode"
             if (preferences.string(forKey: passCodeKey) == contraseña){
                 hiddenText.endEditing(true)
-                dismiss(animated: true, completion: nil)
-                delegate?.passCodeAuthentication()
+                self.performSegue(withIdentifier: "goToPrincipalFromCode", sender: nil)
             }else{
                 uno.text = "-"
                 dos.text = "-"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MGQ-TD-JCT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kEv-sU-A9H">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1138,7 +1138,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="EPX-ju-N0w"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ae-OX-hdV" userLabel="TodayView">
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ae-OX-hdV" userLabel="TodayView">
                                                 <rect key="frame" x="0.0" y="50" width="375" height="80"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3br-Tl-uCU">
@@ -1259,7 +1259,6 @@
                         <outlet property="monthHeaderView" destination="5yb-ed-Xit" id="hes-xe-vxn"/>
                         <outlet property="todayView" destination="5Ae-OX-hdV" id="Okq-Gl-RXF"/>
                         <outlet property="weekDaysView" destination="bBX-vY-Wlr" id="kJB-0v-d0p"/>
-                        <segue destination="kEv-sU-A9H" kind="presentation" identifier="authPopUp" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="F1O-qX-nlr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1950,11 +1949,12 @@
                         <outlet property="fingerButton" destination="xYa-ZS-LCm" id="RdZ-Jk-QrC"/>
                         <outlet property="fingerView" destination="99i-6f-vNL" id="o10-p2-OsH"/>
                         <segue destination="ErM-cB-hkR" kind="presentation" identifier="codePop" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="agA-Ax-ACM"/>
+                        <segue destination="MGQ-TD-JCT" kind="show" identifier="goToPrincipal" id="MB8-Mi-kWD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNX-08-gQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1630" y="-1794"/>
+            <point key="canvasLocation" x="-3358" y="-1359"/>
         </scene>
         <!--Pass Code View Controller-->
         <scene sceneID="wZJ-Dd-o1w">
@@ -2098,11 +2098,12 @@
                         <outlet property="infoLabel" destination="rrf-bT-Hzy" id="OrY-4n-pIj"/>
                         <outlet property="tres" destination="zTI-lx-eRX" id="dR5-43-2hH"/>
                         <outlet property="uno" destination="pPc-ax-xzi" id="1rt-Sg-imH"/>
+                        <segue destination="MGQ-TD-JCT" kind="show" identifier="goToPrincipalFromCode" id="KFh-cM-dG9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rsO-hP-lST" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2429.5999999999999" y="-1794.1529235382311"/>
+            <point key="canvasLocation" x="-2553" y="-2112"/>
         </scene>
         <!--Calendario-->
         <scene sceneID="UcK-MD-oeg">
@@ -2124,7 +2125,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="IgH-kM-A2w">
             <objects>
-                <tabBarController id="MGQ-TD-JCT" sceneMemberID="viewController">
+                <tabBarController modalTransitionStyle="crossDissolve" id="MGQ-TD-JCT" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Ran-ho-gu7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -4989,4 +4990,7 @@
         <image name="visible" width="30" height="30"/>
         <image name="visible-2" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KFh-cM-dG9"/>
+    </inferredMetricsTieBreakers>
 </document>
