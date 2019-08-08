@@ -857,7 +857,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = D5PK29TDFS;
 				INFOPLIST_FILE = MedicalAgenda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -866,7 +866,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = codebounds.com.magenda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = magendaDevelopment;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -877,8 +877,8 @@
 			baseConfigurationReference = 2ECB07452B1FDC61AFED6DFD /* Pods-MedicalAgenda.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = D5PK29TDFS;
 				INFOPLIST_FILE = MedicalAgenda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -887,7 +887,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = codebounds.com.magenda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = magendaDistriProfile;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
