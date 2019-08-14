@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D08506522FC7490007529BA /* ForzadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D08506422FC7490007529BA /* ForzadoViewController.swift */; };
 		6DAD6003312866C184EA2827 /* Pods_MedicalAgenda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFDC0A76A7D55F18FAB16B7 /* Pods_MedicalAgenda.framework */; };
 		C3593606227F3E0A00765C89 /* PatologiaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3593605227F3E0A00765C89 /* PatologiaTableViewCell.swift */; };
 		C3593608228CAE4E00765C89 /* TareasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3593607228CAE4E00765C89 /* TareasViewController.swift */; };
@@ -93,6 +94,7 @@
 /* Begin PBXFileReference section */
 		2ECB07452B1FDC61AFED6DFD /* Pods-MedicalAgenda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalAgenda.release.xcconfig"; path = "Target Support Files/Pods-MedicalAgenda/Pods-MedicalAgenda.release.xcconfig"; sourceTree = "<group>"; };
 		558395A0955E92BF8A6F40EA /* Pods-MedicalAgenda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalAgenda.debug.xcconfig"; path = "Target Support Files/Pods-MedicalAgenda/Pods-MedicalAgenda.debug.xcconfig"; sourceTree = "<group>"; };
+		5D08506422FC7490007529BA /* ForzadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForzadoViewController.swift; sourceTree = "<group>"; };
 		AAFDC0A76A7D55F18FAB16B7 /* Pods_MedicalAgenda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicalAgenda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34033C222664973003919BA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3593605227F3E0A00765C89 /* PatologiaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatologiaTableViewCell.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				F23CF3DA229679AE0037D636 /* VerPacienteBotonClass.swift */,
 				F2E337AB22AA83090084E57C /* AuthenticationViewController.swift */,
 				F2E9CD4622D4C92500CEA9C6 /* PassCodeViewController.swift */,
+				5D08506422FC7490007529BA /* ForzadoViewController.swift */,
 			);
 			path = Principal;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D08506522FC7490007529BA /* ForzadoViewController.swift in Sources */,
 				F23CF3DB229679AE0037D636 /* VerPacienteBotonClass.swift in Sources */,
 				C3593606227F3E0A00765C89 /* PatologiaTableViewCell.swift in Sources */,
 				F27B518C229E95E400CD1641 /* PendientesTableViewCell.swift in Sources */,
