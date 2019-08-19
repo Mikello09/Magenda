@@ -26,7 +26,7 @@ class BuscarViewController: BaseViewController, FilterProtocol, UICollectionView
     
     
     
-    @IBOutlet weak var headerView: Header!
+    @IBOutlet weak var headerView: HeaderWithIcon!
     @IBOutlet weak var calendarHastaLabel: UILabel!
     @IBOutlet weak var calendarHastaButton: UIButton!
     @IBOutlet weak var calendarDesdeLabel: UILabel!
@@ -112,6 +112,7 @@ class BuscarViewController: BaseViewController, FilterProtocol, UICollectionView
         
         navigationView(origin: self)
         headerView.title.text = "Buscar"
+        headerView.baseViewController = self
         
         bindView()
     }

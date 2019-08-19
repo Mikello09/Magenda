@@ -25,6 +25,7 @@ class AuthenticationViewController: BaseViewController{
         }
         setShadow(toView: fingerView)
         setShadow(toView: codeView)
+        VersionManager.shared.getVersion()
     }
     
     override func viewDidAppear(_ animated: Bool) {

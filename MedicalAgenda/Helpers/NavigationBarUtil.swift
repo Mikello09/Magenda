@@ -72,10 +72,8 @@ extension UIViewController{
     }
     
     @IBAction func logo_clicked(_ sender: LogoBoton){
-        //        let vc = sender.origin.storyboard!.instantiateViewController(withIdentifier: "configurationViewController")
-        //        sender.origin.present(vc, animated: true, completion: nil)
-        AnalyticsManager.shared.getData()
-
+            let vc = sender.origin.storyboard!.instantiateViewController(withIdentifier: "configurationViewController")
+            sender.origin.present(vc, animated: true, completion: nil)
     }
     
 }

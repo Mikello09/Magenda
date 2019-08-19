@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5D08506522FC7490007529BA /* ForzadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D08506422FC7490007529BA /* ForzadoViewController.swift */; };
+		5D0850672306A80D007529BA /* VersionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0850662306A80D007529BA /* VersionManager.swift */; };
+		5D08506A2306BAE7007529BA /* ExportarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0850692306BAE7007529BA /* ExportarViewController.swift */; };
+		5D08506C2306BE66007529BA /* HeaderWithIcon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D08506B2306BE66007529BA /* HeaderWithIcon.xib */; };
+		5D08506E2306BE73007529BA /* HeaderWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D08506D2306BE73007529BA /* HeaderWithIcon.swift */; };
+		5D0850702306C0D7007529BA /* ExportarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D08506F2306C0D7007529BA /* ExportarRouter.swift */; };
 		6DAD6003312866C184EA2827 /* Pods_MedicalAgenda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFDC0A76A7D55F18FAB16B7 /* Pods_MedicalAgenda.framework */; };
 		C3593606227F3E0A00765C89 /* PatologiaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3593605227F3E0A00765C89 /* PatologiaTableViewCell.swift */; };
 		C3593608228CAE4E00765C89 /* TareasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3593607228CAE4E00765C89 /* TareasViewController.swift */; };
@@ -95,6 +100,11 @@
 		2ECB07452B1FDC61AFED6DFD /* Pods-MedicalAgenda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalAgenda.release.xcconfig"; path = "Target Support Files/Pods-MedicalAgenda/Pods-MedicalAgenda.release.xcconfig"; sourceTree = "<group>"; };
 		558395A0955E92BF8A6F40EA /* Pods-MedicalAgenda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalAgenda.debug.xcconfig"; path = "Target Support Files/Pods-MedicalAgenda/Pods-MedicalAgenda.debug.xcconfig"; sourceTree = "<group>"; };
 		5D08506422FC7490007529BA /* ForzadoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForzadoViewController.swift; sourceTree = "<group>"; };
+		5D0850662306A80D007529BA /* VersionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionManager.swift; sourceTree = "<group>"; };
+		5D0850692306BAE7007529BA /* ExportarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportarViewController.swift; sourceTree = "<group>"; };
+		5D08506B2306BE66007529BA /* HeaderWithIcon.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderWithIcon.xib; sourceTree = "<group>"; };
+		5D08506D2306BE73007529BA /* HeaderWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderWithIcon.swift; sourceTree = "<group>"; };
+		5D08506F2306C0D7007529BA /* ExportarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportarRouter.swift; sourceTree = "<group>"; };
 		AAFDC0A76A7D55F18FAB16B7 /* Pods_MedicalAgenda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicalAgenda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34033C222664973003919BA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3593605227F3E0A00765C89 /* PatologiaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatologiaTableViewCell.swift; sourceTree = "<group>"; };
@@ -192,6 +202,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D0850682306BAD9007529BA /* Exportar */ = {
+			isa = PBXGroup;
+			children = (
+				5D0850692306BAE7007529BA /* ExportarViewController.swift */,
+				5D08506F2306C0D7007529BA /* ExportarRouter.swift */,
+			);
+			path = Exportar;
+			sourceTree = "<group>";
+		};
 		ADC3163D1D0A333C7C2C6CF9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,7 +241,7 @@
 		C3D33CB4223C2549005173AD /* MedicalAgenda */ = {
 			isa = PBXGroup;
 			children = (
-				F2F8D9C722F879E100333449 /* Analytics */,
+				F2F8D9C722F879E100333449 /* API */,
 				F2F8D9BC22F1A85D00333449 /* Configuration */,
 				F2F8D9BB22F1A84D00333449 /* Animation */,
 				F2B2C0C622E75512006DFC0F /* Notifications */,
@@ -327,6 +346,7 @@
 		F2264437226E179800A664F9 /* BuscarPaciente */ = {
 			isa = PBXGroup;
 			children = (
+				5D0850682306BAD9007529BA /* Exportar */,
 				F226443A226F37E700A664F9 /* BuscarPacienteTableViewCell.swift */,
 				F23CF3DE2296D8A60037D636 /* BuscarViewController.swift */,
 				F23CF3E12296E0660037D636 /* LabelCollectionViewCell.swift */,
@@ -399,6 +419,8 @@
 				F27B5194229FF67100CD1641 /* Header.swift */,
 				F2BDAFD222C383FF009111C6 /* HeaderWithDetail.xib */,
 				F2BDAFD422C38410009111C6 /* HeaderWithDetail.swift */,
+				5D08506B2306BE66007529BA /* HeaderWithIcon.xib */,
+				5D08506D2306BE73007529BA /* HeaderWithIcon.swift */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -460,12 +482,13 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
-		F2F8D9C722F879E100333449 /* Analytics */ = {
+		F2F8D9C722F879E100333449 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				F285CF5722F87A2200B39E16 /* AnalyticsManager.swift */,
+				5D0850662306A80D007529BA /* VersionManager.swift */,
 			);
-			path = Analytics;
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,6 +557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3D33CC0223C254D005173AD /* LaunchScreen.storyboard in Resources */,
+				5D08506C2306BE66007529BA /* HeaderWithIcon.xib in Resources */,
 				F27B5193229FF1CB00CD1641 /* Header.xib in Resources */,
 				C3D33CBD223C254D005173AD /* Assets.xcassets in Resources */,
 				F2BDAFD322C383FF009111C6 /* HeaderWithDetail.xib in Resources */,
@@ -595,9 +619,11 @@
 				5D08506522FC7490007529BA /* ForzadoViewController.swift in Sources */,
 				F23CF3DB229679AE0037D636 /* VerPacienteBotonClass.swift in Sources */,
 				C3593606227F3E0A00765C89 /* PatologiaTableViewCell.swift in Sources */,
+				5D08506A2306BAE7007529BA /* ExportarViewController.swift in Sources */,
 				F27B518C229E95E400CD1641 /* PendientesTableViewCell.swift in Sources */,
 				F23CF3F9229BE0E50037D636 /* ResultadosMainCell.swift in Sources */,
 				F2E9CD4722D4C92500CEA9C6 /* PassCodeViewController.swift in Sources */,
+				5D0850702306C0D7007529BA /* ExportarRouter.swift in Sources */,
 				F207C76822C50A6900D7F0E2 /* AnadirPruebaRouter.swift in Sources */,
 				F25851EB22E3BA7000AD19AD /* CustomCollectionCell.swift in Sources */,
 				F207C76622C50A4700D7F0E2 /* AnadirPruebaPresenter.swift in Sources */,
@@ -607,6 +633,7 @@
 				F22F4EC82253B7EF00E627FB /* CalendarPopUpView.swift in Sources */,
 				C3D79D31223C2CFC00EB5ACE /* Paciente.swift in Sources */,
 				F22F4EC3224BAAB800E627FB /* PatologiasSelectionVC.swift in Sources */,
+				5D08506E2306BE73007529BA /* HeaderWithIcon.swift in Sources */,
 				F27B5195229FF67100CD1641 /* Header.swift in Sources */,
 				F285CF5822F87A2200B39E16 /* AnalyticsManager.swift in Sources */,
 				F23CF3E42296E0990037D636 /* FechaCollectionViewCell.swift in Sources */,
@@ -659,6 +686,7 @@
 				F25851E922E3B64200AD19AD /* CustomCollectionViewController.swift in Sources */,
 				F2E9B55022F1A38600964EA6 /* AnimationFactory.swift in Sources */,
 				F207C76422C5096800D7F0E2 /* AnadirPruebaViewController.swift in Sources */,
+				5D0850672306A80D007529BA /* VersionManager.swift in Sources */,
 				F28D271E229E66C300948679 /* RevisarViewController.swift in Sources */,
 				C3D33CB6223C2549005173AD /* AppDelegate.swift in Sources */,
 				F29ACB6D228EAC27009CD689 /* PruebaCalendarioBotonClass.swift in Sources */,
