@@ -123,15 +123,21 @@ class ViewController: BaseViewController, AuthProtocol {
             }
             let pruebas = realm.objects(Prueba.self)
             for prueba in pruebas{
-                preFechas.append(PreFechas(id: prueba.id, date: prueba.fechaPrueba,tipo:"P", dots: colorPrueba))
+                if prueba.recordarPrueba {
+                    preFechas.append(PreFechas(id: prueba.id, date: prueba.fechaPrueba,tipo:"P", dots: colorPrueba))
+                }
             }
             let revisiones = realm.objects(Revisar.self)
             for revisar in revisiones{
-                preFechas.append(PreFechas(id: revisar.id, date: revisar.fechaRevisar,tipo:"P2", dots: colorRevisar))
+                if revisar.recordarRevisar {
+                    preFechas.append(PreFechas(id: revisar.id, date: revisar.fechaRevisar,tipo:"P2", dots: colorRevisar))
+                }
             }
             let siguientesCitas = realm.objects(SiguienteCita.self)
             for siguienteCita in siguientesCitas{
-                preFechas.append(PreFechas(id: siguienteCita.id, date: siguienteCita.fechaSiguienteCita,tipo:"SC", dots: colorSiguienteCita))
+                if siguienteCita.recordarSiguienteCita {
+                    preFechas.append(PreFechas(id: siguienteCita.id, date: siguienteCita.fechaSiguienteCita,tipo:"SC", dots: colorSiguienteCita))
+                }
             }
         }
         var preFechasEncontradas = [PreFechas]()

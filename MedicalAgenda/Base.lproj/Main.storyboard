@@ -708,7 +708,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="293" height="39.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="nHistoria" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="vR4-Ze-4tD">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ID" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="vR4-Ze-4tD">
                                                             <rect key="frame" x="8" y="2.5" width="277" height="35"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="35" id="Nhp-s1-3ip"/>
@@ -2259,10 +2259,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40z-6U-TIV">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="504"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="439"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ibs-Yh-bbx">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehg-3W-8iB" userLabel="GlobalView">
                                                         <rect key="frame" x="12" y="12" width="351" height="200"/>
@@ -2287,7 +2287,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yB6-TS-AFT" userLabel="NHistoriaView">
                                                                 <rect key="frame" x="8" y="50" width="335" height="50"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="N.Historia" textAlignment="natural" minimumFontSize="6" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GX9-cV-KfU">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ID" textAlignment="natural" minimumFontSize="6" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GX9-cV-KfU">
                                                                         <rect key="frame" x="135" y="7.5" width="200" height="35"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="35" id="B9Y-ag-kr4"/>
@@ -2313,8 +2313,8 @@
                                                                             <action selector="nHistoriaEditingEnd:" destination="Ahk-ZA-wWI" eventType="editingDidEnd" id="FXN-Mk-Ima"/>
                                                                         </connections>
                                                                     </textField>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N.º Historia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EER-dr-psi">
-                                                                        <rect key="frame" x="8" y="15.5" width="86.5" height="19.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EER-dr-psi">
+                                                                        <rect key="frame" x="8" y="15.5" width="16.5" height="19.5"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -2798,25 +2798,6 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAf-MW-Ggc">
-                                                        <rect key="frame" x="8" y="477" width="359" height="45"/>
-                                                        <color key="backgroundColor" red="0.1647058824" green="0.63921568630000003" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="45" id="Wi9-uW-wrk"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                                        <state key="normal" title="GUARDAR">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="3"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="guardarPaciente:" destination="Ahk-ZA-wWI" eventType="touchUpInside" id="Mqh-yt-I9L"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -2830,16 +2811,12 @@
                                                     <constraint firstItem="NWg-m9-aS2" firstAttribute="leading" secondItem="Ibs-Yh-bbx" secondAttribute="leading" constant="12" id="QT4-X0-yA0"/>
                                                     <constraint firstItem="MEF-xg-bip" firstAttribute="top" secondItem="Ehg-3W-8iB" secondAttribute="bottom" constant="12" id="RSy-Pr-6iO"/>
                                                     <constraint firstItem="NWg-m9-aS2" firstAttribute="top" secondItem="MEF-xg-bip" secondAttribute="bottom" constant="12" id="Twc-Dk-4RV"/>
-                                                    <constraint firstItem="qAf-MW-Ggc" firstAttribute="centerX" secondItem="Ibs-Yh-bbx" secondAttribute="centerX" id="WCf-lZ-IZN"/>
-                                                    <constraint firstAttribute="height" constant="600" id="Wto-81-zKw"/>
-                                                    <constraint firstItem="qAf-MW-Ggc" firstAttribute="top" secondItem="koD-eq-YlR" secondAttribute="bottom" constant="12" id="aB0-4b-cli"/>
-                                                    <constraint firstItem="qAf-MW-Ggc" firstAttribute="leading" secondItem="Ibs-Yh-bbx" secondAttribute="leading" constant="8" id="bRu-bA-Jsi"/>
+                                                    <constraint firstAttribute="height" constant="500" id="Wto-81-zKw"/>
                                                     <constraint firstAttribute="trailing" secondItem="MEF-xg-bip" secondAttribute="trailing" constant="12" id="dJc-7o-V9u"/>
                                                     <constraint firstAttribute="trailing" secondItem="Ehg-3W-8iB" secondAttribute="trailing" constant="12" id="ild-sT-XlA"/>
                                                     <constraint firstItem="MEF-xg-bip" firstAttribute="leading" secondItem="Ibs-Yh-bbx" secondAttribute="leading" constant="12" id="p84-qv-fFV"/>
                                                     <constraint firstItem="05S-ar-CLH" firstAttribute="leading" secondItem="Ibs-Yh-bbx" secondAttribute="leading" constant="12" id="q5C-Rz-JWw"/>
                                                     <constraint firstAttribute="trailing" secondItem="koD-eq-YlR" secondAttribute="trailing" constant="12" id="u0l-NB-7Gk"/>
-                                                    <constraint firstAttribute="trailing" secondItem="qAf-MW-Ggc" secondAttribute="trailing" constant="8" id="vnq-hu-PRn"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -2852,6 +2829,25 @@
                                             <constraint firstAttribute="trailing" secondItem="Ibs-Yh-bbx" secondAttribute="trailing" id="xEo-0f-xjK"/>
                                         </constraints>
                                     </scrollView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAf-MW-Ggc">
+                                        <rect key="frame" x="8" y="499" width="359" height="45"/>
+                                        <color key="backgroundColor" red="0.1647058824" green="0.63921568630000003" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Wi9-uW-wrk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="GUARDAR">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="guardarPaciente:" destination="Ahk-ZA-wWI" eventType="touchUpInside" id="Mqh-yt-I9L"/>
+                                        </connections>
+                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4z-wH-TLs" customClass="Header" customModule="MedicalAgenda" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2863,12 +2859,15 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="40z-6U-TIV" firstAttribute="leading" secondItem="tOd-dJ-xSb" secondAttribute="leading" id="0qp-ui-Cdw"/>
+                                    <constraint firstItem="qAf-MW-Ggc" firstAttribute="leading" secondItem="tOd-dJ-xSb" secondAttribute="leading" constant="8" id="2H0-jM-I84"/>
                                     <constraint firstItem="V4z-wH-TLs" firstAttribute="leading" secondItem="tOd-dJ-xSb" secondAttribute="leading" id="58Q-VL-omU"/>
                                     <constraint firstAttribute="trailing" secondItem="40z-6U-TIV" secondAttribute="trailing" id="Aku-Mi-Dpz"/>
                                     <constraint firstItem="40z-6U-TIV" firstAttribute="top" secondItem="V4z-wH-TLs" secondAttribute="bottom" id="F4i-ua-FGU"/>
+                                    <constraint firstAttribute="trailing" secondItem="qAf-MW-Ggc" secondAttribute="trailing" constant="8" id="FdA-RC-zNl"/>
                                     <constraint firstItem="V4z-wH-TLs" firstAttribute="top" secondItem="tOd-dJ-xSb" secondAttribute="top" id="OT2-9w-XWb"/>
                                     <constraint firstAttribute="trailing" secondItem="V4z-wH-TLs" secondAttribute="trailing" id="Zsy-Qh-BSE"/>
-                                    <constraint firstAttribute="bottom" secondItem="40z-6U-TIV" secondAttribute="bottom" id="fAf-3h-o83"/>
+                                    <constraint firstItem="qAf-MW-Ggc" firstAttribute="top" secondItem="40z-6U-TIV" secondAttribute="bottom" constant="10" id="fAf-3h-o83"/>
+                                    <constraint firstAttribute="bottom" secondItem="qAf-MW-Ggc" secondAttribute="bottom" constant="10" id="gfx-SZ-bwm"/>
                                 </constraints>
                             </view>
                         </subviews>

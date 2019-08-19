@@ -181,7 +181,8 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if(indexPath.section == 0){
             if(indexPath.row == 0){
                 let cell = tableView.dequeueReusableCell(withIdentifier: "filterEditCell", for: indexPath) as! FilterEditCell
-                cell.value.placeholder = "nHistoria"
+                cell.value.placeholder = "ID"
+                cell.value.keyboardType = .numberPad
                 cell.value.addTarget(self, action: #selector(nHistoriaEditingStarted), for: UIControlEvents.allEditingEvents)
                 cell.value.text = allFiltersData[indexPath.section][indexPath.row].value
                 return cell
@@ -380,13 +381,13 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 allFiltersData[0][0].value = sender.text!
                 if(filterSelectedArray.count > 0){
                     if(!filterSelectedArray.contains(where: {$0.tipo == "nHistoria"})){
-                        filterSelectedArray.append(FilterSelected(tipo: "nHistoria", value: "nHistoria", section: 0, row: 0))
+                        filterSelectedArray.append(FilterSelected(tipo: "nHistoria", value: "ID", section: 0, row: 0))
                         selectedCollection.reloadData()
                         noHayFiltersText.isHidden = true
                         selectedCollection.isHidden = false
                     }
                 }else{
-                    filterSelectedArray.append(FilterSelected(tipo: "nHistoria", value: "nHistoria", section: 0, row: 0))
+                    filterSelectedArray.append(FilterSelected(tipo: "nHistoria", value: "ID", section: 0, row: 0))
                     selectedCollection.reloadData()
                     noHayFiltersText.isHidden = true
                     selectedCollection.isHidden = false

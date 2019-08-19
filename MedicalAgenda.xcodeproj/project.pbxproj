@@ -264,7 +264,6 @@
 				F2264434226E0B2B00A664F9 /* InformacionPaciente */,
 				F2264433226E07A800A664F9 /* Principal */,
 				F22F4EC4224E4BB900E627FB /* NuevoPaciente */,
-				C3D79D2F223C2CE700EB5ACE /* Datos */,
 				C3D79D2C223C288A00EB5ACE /* AnadirPatologia */,
 				C3D33CB5223C2549005173AD /* AppDelegate.swift */,
 				C3D33CB9223C2549005173AD /* Main.storyboard */,
@@ -373,6 +372,7 @@
 				C359360B228E0E1500765C89 /* PruebasTableViewCell.swift */,
 				F29ACB6C228EAC26009CD689 /* PruebaCalendarioBotonClass.swift */,
 				F29ACB72228EC4C9009CD689 /* SeleccionarItemBotonClass.swift */,
+				C3D79D2F223C2CE700EB5ACE /* Datos */,
 			);
 			path = NuevoPaciente;
 			sourceTree = "<group>";
