@@ -55,12 +55,6 @@ class ViewController: BaseViewController, AuthProtocol {
             let destinationVC:AuthenticationViewController = segue.destination as! AuthenticationViewController
             destinationVC.delegate = self
         }
-        
-    }
-    
-    func fbButtonPressed() {
-        
-        print("Share to fb")
     }
     
     override func viewDidLayoutSubviews() {
