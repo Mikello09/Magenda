@@ -45,7 +45,6 @@
 		F23CF3DF2296D8A60037D636 /* BuscarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CF3DE2296D8A60037D636 /* BuscarViewController.swift */; };
 		F23CF3E22296E0660037D636 /* LabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CF3E12296E0660037D636 /* LabelCollectionViewCell.swift */; };
 		F23CF3E42296E0990037D636 /* FechaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CF3E32296E0990037D636 /* FechaCollectionViewCell.swift */; };
-		F23CF3E6229743840037D636 /* RangoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CF3E5229743840037D636 /* RangoCollectionViewCell.swift */; };
 		F23CF3E82298015E0037D636 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CF3E72298015E0037D636 /* FilterViewController.swift */; };
 		F23CF3EA2299BDF70037D636 /* FilterEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CF3E92299BDF70037D636 /* FilterEditCell.swift */; };
 		F23CF3EC2299BE050037D636 /* FilterValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23CF3EB2299BE050037D636 /* FilterValueCell.swift */; };
@@ -82,8 +81,6 @@
 		F2C3F6D722CA5191004A439C /* RevisionesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3F6D622CA5191004A439C /* RevisionesRouter.swift */; };
 		F2E337AA22AA70C80084E57C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E337A922AA70C80084E57C /* BaseViewController.swift */; };
 		F2E337AC22AA83090084E57C /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E337AB22AA83090084E57C /* AuthenticationViewController.swift */; };
-		F2E9B54B22F08E9000964EA6 /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E9B54A22F08E8F00964EA6 /* SectionHeader.xib */; };
-		F2E9B54D22F08F8000964EA6 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9B54C22F08F8000964EA6 /* SectionHeader.swift */; };
 		F2E9B55022F1A38600964EA6 /* AnimationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9B54F22F1A38600964EA6 /* AnimationFactory.swift */; };
 		F2E9CD2B22D3E94900CEA9C6 /* PendientesTableViewCellSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9CD2A22D3E94900CEA9C6 /* PendientesTableViewCellSimple.swift */; };
 		F2E9CD4722D4C92500CEA9C6 /* PassCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9CD4622D4C92500CEA9C6 /* PassCodeViewController.swift */; };
@@ -139,7 +136,6 @@
 		F23CF3DE2296D8A60037D636 /* BuscarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscarViewController.swift; sourceTree = "<group>"; };
 		F23CF3E12296E0660037D636 /* LabelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewCell.swift; sourceTree = "<group>"; };
 		F23CF3E32296E0990037D636 /* FechaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FechaCollectionViewCell.swift; sourceTree = "<group>"; };
-		F23CF3E5229743840037D636 /* RangoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangoCollectionViewCell.swift; sourceTree = "<group>"; };
 		F23CF3E72298015E0037D636 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		F23CF3E92299BDF70037D636 /* FilterEditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEditCell.swift; sourceTree = "<group>"; };
 		F23CF3EB2299BE050037D636 /* FilterValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterValueCell.swift; sourceTree = "<group>"; };
@@ -176,8 +172,6 @@
 		F2C3F6D622CA5191004A439C /* RevisionesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevisionesRouter.swift; sourceTree = "<group>"; };
 		F2E337A922AA70C80084E57C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F2E337AB22AA83090084E57C /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
-		F2E9B54A22F08E8F00964EA6 /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
-		F2E9B54C22F08F8000964EA6 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		F2E9B54F22F1A38600964EA6 /* AnimationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationFactory.swift; sourceTree = "<group>"; };
 		F2E9CD2A22D3E94900CEA9C6 /* PendientesTableViewCellSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendientesTableViewCellSimple.swift; sourceTree = "<group>"; };
 		F2E9CD4622D4C92500CEA9C6 /* PassCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassCodeViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +203,21 @@
 				5D08506F2306C0D7007529BA /* ExportarRouter.swift */,
 			);
 			path = Exportar;
+		5D08505122FB174C007529BA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F226443A226F37E700A664F9 /* BuscarPacienteTableViewCell.swift */,
+				F23CF3E12296E0660037D636 /* LabelCollectionViewCell.swift */,
+				F23CF3E32296E0990037D636 /* FechaCollectionViewCell.swift */,
+				F23CF3E92299BDF70037D636 /* FilterEditCell.swift */,
+				F23CF3EB2299BE050037D636 /* FilterValueCell.swift */,
+				F23CF3EF2299DACF0037D636 /* FilterSelectedCell.swift */,
+				F23CF3F12299E6300037D636 /* FilterDeleteButton.swift */,
+				F23CF3F3229AC13A0037D636 /* FilterSelectedBuscarCell.swift */,
+				F23CF3F8229BE0E50037D636 /* ResultadosMainCell.swift */,
+				F23CF3FA229BE0F80037D636 /* ResultadosSubCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		ADC3163D1D0A333C7C2C6CF9 /* Pods */ = {
@@ -252,7 +261,6 @@
 				F2264434226E0B2B00A664F9 /* InformacionPaciente */,
 				F2264433226E07A800A664F9 /* Principal */,
 				F22F4EC4224E4BB900E627FB /* NuevoPaciente */,
-				C3D79D2F223C2CE700EB5ACE /* Datos */,
 				C3D79D2C223C288A00EB5ACE /* AnadirPatologia */,
 				C3D33CB5223C2549005173AD /* AppDelegate.swift */,
 				C3D33CB9223C2549005173AD /* Main.storyboard */,
@@ -352,16 +360,9 @@
 				F23CF3E12296E0660037D636 /* LabelCollectionViewCell.swift */,
 				F23CF3E32296E0990037D636 /* FechaCollectionViewCell.swift */,
 				F23CF3E5229743840037D636 /* RangoCollectionViewCell.swift */,
+				5D08505122FB174C007529BA /* Components */,
 				F23CF3E72298015E0037D636 /* FilterViewController.swift */,
-				F23CF3E92299BDF70037D636 /* FilterEditCell.swift */,
-				F23CF3EB2299BE050037D636 /* FilterValueCell.swift */,
-				F23CF3EF2299DACF0037D636 /* FilterSelectedCell.swift */,
-				F23CF3F12299E6300037D636 /* FilterDeleteButton.swift */,
-				F23CF3F3229AC13A0037D636 /* FilterSelectedBuscarCell.swift */,
-				F23CF3F8229BE0E50037D636 /* ResultadosMainCell.swift */,
-				F23CF3FA229BE0F80037D636 /* ResultadosSubCell.swift */,
-				F2E9B54A22F08E8F00964EA6 /* SectionHeader.xib */,
-				F2E9B54C22F08F8000964EA6 /* SectionHeader.swift */,
+				F23CF3DE2296D8A60037D636 /* BuscarViewController.swift */,
 			);
 			path = BuscarPaciente;
 			sourceTree = "<group>";
@@ -373,6 +374,7 @@
 				C359360B228E0E1500765C89 /* PruebasTableViewCell.swift */,
 				F29ACB6C228EAC26009CD689 /* PruebaCalendarioBotonClass.swift */,
 				F29ACB72228EC4C9009CD689 /* SeleccionarItemBotonClass.swift */,
+				C3D79D2F223C2CE700EB5ACE /* Datos */,
 			);
 			path = NuevoPaciente;
 			sourceTree = "<group>";
@@ -562,6 +564,7 @@
 				C3D33CBD223C254D005173AD /* Assets.xcassets in Resources */,
 				F2BDAFD322C383FF009111C6 /* HeaderWithDetail.xib in Resources */,
 				F2E9B54B22F08E9000964EA6 /* SectionHeader.xib in Resources */,
+				F2C3F6D922CA52ED004A439C /* RevisionSlide.xib in Resources */,
 				F22F4EC62253B77000E627FB /* CalendarPopUpView.xib in Resources */,
 				C3D33CBB223C2549005173AD /* Main.storyboard in Resources */,
 			);
@@ -647,6 +650,7 @@
 				F2F8D9BE22F1A87100333449 /* ConfigurationViewController.swift in Sources */,
 				F23CF3D92296797F0037D636 /* VistoSwitchClass.swift in Sources */,
 				F23CF3E6229743840037D636 /* RangoCollectionViewCell.swift in Sources */,
+				F2F9BD5C22B1128C00A9B867 /* InformacionPacienteViewController.swift in Sources */,
 				C3D79D2E223C28A100EB5ACE /* PatologiasVC.swift in Sources */,
 				F29ACB73228EC4C9009CD689 /* SeleccionarItemBotonClass.swift in Sources */,
 				F23CF3E82298015E0037D636 /* FilterViewController.swift in Sources */,
@@ -692,7 +696,6 @@
 				F29ACB6D228EAC27009CD689 /* PruebaCalendarioBotonClass.swift in Sources */,
 				F20653E022D237AC00375F1C /* PendientesPresenter.swift in Sources */,
 				F23CF3EA2299BDF70037D636 /* FilterEditCell.swift in Sources */,
-				F2E9B54D22F08F8000964EA6 /* SectionHeader.swift in Sources */,
 				F2F9BD6222B1321100A9B867 /* InformacionPacientePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

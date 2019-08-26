@@ -55,6 +55,19 @@ class CustomCollectionViewController: BaseViewController{
         refreshControl.addTarget(self, action: #selector(refreshWeatherData(_:)), for: .valueChanged)
     }
     
+    @IBAction func eliminarClicked(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Cuidado!!", message: "¿Estás seguro de eliminar este paciente?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Si", style: .destructive, handler: { action in
+            self.presenter.eliminarPaciente()
+            alert.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         paintCells()

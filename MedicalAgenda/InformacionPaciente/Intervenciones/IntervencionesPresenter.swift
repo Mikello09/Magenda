@@ -27,11 +27,12 @@ class IntervencionesPresenter{
         fechaPreanestesia: Date,
         notasPreanestesia: String,
         intervencionQuirurgica: IntervencionQuirurgica = IntervencionQuirurgica(),
-        isNew:Bool = true){
+        isNew:Bool = true,
+        idIntervencion: Int?){
         
         try! realm.write {
             intervencionQuirurgica.id = nHistoria
-            intervencionQuirurgica.idIQ = realm.objects(IntervencionQuirurgica.self).filter("id = %@", nHistoria).count
+            intervencionQuirurgica.idIQ = idIntervencion ?? realm.objects(IntervencionQuirurgica.self).filter("id = %@", nHistoria).count
             intervencionQuirurgica.tipoIntervencion = tipoIQ
             intervencionQuirurgica.intervencionQuirurgica = true
             intervencionQuirurgica.vistoIQ = false

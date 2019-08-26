@@ -173,7 +173,8 @@ class AnadirIntervencionViewController: BaseViewController, UITextViewDelegate, 
                 fechaPreanestesia: valorFechaPreanestesia == "" ? "1990-09-09".toDateFormat : valorFechaPreanestesia.toDateFormat,
                 notasPreanestesia: preanestesiaNotasTextView.text,
                 intervencionQuirurgica: intervencionQuirurgica,
-                isNew: isNew)
+                isNew: isNew,
+                idIntervencion: idIntervencion)
             navigationController?.popViewController(animated: true)
         } else {
             showAlert(mensaje: "Para poder guardar una intervención tienes que elegir un tipo de intervención")

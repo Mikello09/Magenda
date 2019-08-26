@@ -221,7 +221,7 @@ class BuscarViewController: BaseViewController, FilterProtocol, UICollectionView
                                     }
                                 }
                             break;
-                        case "intervenido":
+                        case "intervenidoSi":
                             for(i,pacienteFiltrado) in pacientesFiltrados.enumerated(){
                                 if(!iq.filter("id == %@", pacienteFiltrado.numeroHistoria).contains(where: {$0.intervenido == true})){
                                     pacientesAEliminar.append(i)
@@ -233,6 +233,17 @@ class BuscarViewController: BaseViewController, FilterProtocol, UICollectionView
                                 }
                             }
                             break;
+                        case "intervenidoNo":
+                            for(i,pacienteFiltrado) in pacientesFiltrados.enumerated(){
+                                if(!iq.filter("id == %@", pacienteFiltrado.numeroHistoria).contains(where: {$0.intervenido == false})){
+                                    pacientesAEliminar.append(i)
+                                }
+                            }
+                            if(pacientesAEliminar.count > 0){
+                                for item in pacientesAEliminar.reversed() {
+                                    pacientesFiltrados.remove(at: item)
+                                }
+                            }
                         case "iq":
                                 for (i,pacienteFiltrado) in pacientesFiltrados.enumerated(){
                                     if(!iq.filter("id == %@", pacienteFiltrado.numeroHistoria).contains(where: {$0.tipoIntervencion == filtro.value})){
@@ -436,7 +447,9 @@ class BuscarViewController: BaseViewController, FilterProtocol, UICollectionView
                 cell.mainView.backgroundColor = colorIQ
             case "patologia":
                 cell.mainView.backgroundColor = colorPatologia
-            case "intervenido":
+            case "intervenidoSi":
+                cell.mainView.backgroundColor = colorGeneral
+            case "intervenidoNo":
                 cell.mainView.backgroundColor = colorGeneral
             default:
                 cell.mainView.backgroundColor = UIColor.black

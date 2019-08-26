@@ -304,6 +304,13 @@ class PacienteVC: BaseViewController, PatologiaSelected, UITableViewDelegate, UI
         self.tabBarController?.tabBar.isHidden = false
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        view.endEditing(true)
+        eliminarPrueba1.isHidden = true
+        eliminarPrueba2.isHidden = true
+    }
+    
     func bindView(){
         
     }
@@ -339,12 +346,13 @@ class PacienteVC: BaseViewController, PatologiaSelected, UITableViewDelegate, UI
     
     func showIntervencionView(intervencion: Bool){
         if(intervencion){
+            self.intervencionesView.addArrangedSubview(operadoView)
             self.intervencionesView.addArrangedSubview(tipoIntervencionView)
             self.intervencionesView.addArrangedSubview(fechaIntervencionView)
             self.intervencionesView.addArrangedSubview(recordarIntervencionView)
             self.intervencionesView.addArrangedSubview(notasIntervencionView)
-            self.intervencionesView.addArrangedSubview(operadoView)
             mainHeight.constant = mainHeight.constant + 325
+            intervenidoChecked()
         }else{
             if(!operadoSwitch.isOn){
                 self.intervencionesView.removeArrangedSubview(fechaListaEsperaView)
@@ -363,7 +371,7 @@ class PacienteVC: BaseViewController, PatologiaSelected, UITableViewDelegate, UI
             notasIntervencionView.removeFromSuperview()
             self.intervencionesView.removeArrangedSubview(recordarIntervencionView)
             recordarIntervencionView.removeFromSuperview()
-            operadoSwitch.setOn(true, animated: false)
+            operadoSwitch.setOn(false, animated: false)
             mainHeight.constant = mainHeight.constant - 325
         }
     }
@@ -377,6 +385,29 @@ class PacienteVC: BaseViewController, PatologiaSelected, UITableViewDelegate, UI
         iqCheckedView.clipsToBounds = true
         iqCheckedView.layer.cornerRadius = 10
         iqCheckedView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+        
+        /////Intervenido
+        operadoView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        operadoView.widthAnchor.constraint(equalToConstant: self.intervencionesView.frame.width)
+        operadoView.backgroundColor = UIColor.white
+        
+        operadoTitulo.translatesAutoresizingMaskIntoConstraints = false
+        operadoTitulo.text = "Intervenido"
+        operadoTitulo.textColor = UIColor.black
+        operadoTitulo.font = UIFont.boldSystemFont(ofSize: 16)
+        operadoView.addSubview(operadoTitulo)
+        operadoTitulo.leftAnchor.constraint(equalTo: operadoView.leftAnchor, constant: 16).isActive = true
+        operadoTitulo.topAnchor.constraint(equalTo: operadoView.topAnchor).isActive = true
+        operadoTitulo.bottomAnchor.constraint(equalTo: operadoView.bottomAnchor).isActive = true
+        
+        operadoSwitch.translatesAutoresizingMaskIntoConstraints = false
+        operadoSwitch.setOn(false, animated: false)
+        operadoSwitch.addTarget(self, action: #selector(intervenidoChec), for: .valueChanged)
+        operadoView.addSubview(operadoSwitch)
+        operadoSwitch.rightAnchor.constraint(equalTo: operadoView.rightAnchor, constant: -8).isActive = true
+        operadoSwitch.topAnchor.constraint(equalTo: operadoView.topAnchor, constant: 10).isActive = true
+        operadoSwitch.bottomAnchor.constraint(equalTo: operadoView.bottomAnchor).isActive = true
         
         ///TipoIntervencion
         tipoIntervencionView.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -525,30 +556,6 @@ class PacienteVC: BaseViewController, PatologiaSelected, UITableViewDelegate, UI
         notasIntervencionSeparador.rightAnchor.constraint(equalTo: notasIntervencionView.rightAnchor, constant: -8).isActive = true
         notasIntervencionSeparador.bottomAnchor.constraint(equalTo: notasIntervencionView.bottomAnchor).isActive = true
         notasIntervencionSeparador.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        
-        
-        /////Intervenido
-        operadoView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        operadoView.widthAnchor.constraint(equalToConstant: self.intervencionesView.frame.width)
-        operadoView.backgroundColor = UIColor.white
-        
-        operadoTitulo.translatesAutoresizingMaskIntoConstraints = false
-        operadoTitulo.text = "Intervenido"
-        operadoTitulo.textColor = UIColor.black
-        operadoTitulo.font = UIFont.boldSystemFont(ofSize: 16)
-        operadoView.addSubview(operadoTitulo)
-        operadoTitulo.leftAnchor.constraint(equalTo: operadoView.leftAnchor, constant: 16).isActive = true
-        operadoTitulo.topAnchor.constraint(equalTo: operadoView.topAnchor).isActive = true
-        operadoTitulo.bottomAnchor.constraint(equalTo: operadoView.bottomAnchor).isActive = true
-        
-        operadoSwitch.translatesAutoresizingMaskIntoConstraints = false
-        operadoSwitch.setOn(true, animated: false)
-        operadoSwitch.addTarget(self, action: #selector(intervenidoChec), for: .valueChanged)
-        operadoView.addSubview(operadoSwitch)
-        operadoSwitch.rightAnchor.constraint(equalTo: operadoView.rightAnchor, constant: -8).isActive = true
-        operadoSwitch.topAnchor.constraint(equalTo: operadoView.topAnchor, constant: 10).isActive = true
-        operadoSwitch.bottomAnchor.constraint(equalTo: operadoView.bottomAnchor).isActive = true
-        
         
         
         /////LISTA DE ESPERA
@@ -1337,74 +1344,88 @@ class PacienteVC: BaseViewController, PatologiaSelected, UITableViewDelegate, UI
     @IBAction func guardarPaciente(_ sender: UIButton) {
         
         if(nHistoriaTextField.text != ""){
-            let paciente: Paciente = Paciente()
-            let intervencionQuirurgica: IntervencionQuirurgica = IntervencionQuirurgica()
-            let revisar: Revisar = Revisar()
-            let siguienteCita: SiguienteCita = SiguienteCita()
-            try! realm.write {
-                ///INFORMACION GENERAL
-                paciente.numeroHistoria = nHistoriaTextField.text!
-                paciente.nombre = nombreTextField.text!
-                paciente.patologia = patologia.title(for: UIControlState.normal)!
-                realm.add(paciente)
-                
-                ///IQ
-                if(intervencionSwitch.isOn){
-                    intervencionQuirurgica.id = nHistoriaTextField.text!
-                    intervencionQuirurgica.idIQ = 0
-                    intervencionQuirurgica.intervencionQuirurgica = intervencionSwitch.isOn
-                    intervencionQuirurgica.tipoIntervencion = tipoIntervencionButton.title(for: UIControlState.normal)!
-                    intervencionQuirurgica.fechaIntervencion = fechaIntervencionText.text?.description == "" ? "1990-09-09".toDateFormat : intervencionFechaValue.toDateFormat
-                    intervencionQuirurgica.recordarIntervencion = recordarIntervencionSwitch.isOn
-                    intervencionQuirurgica.notasIntervencionQuirurgica = notasIntervencionTexto.text.description
-                    intervencionQuirurgica.intervenido = operadoSwitch.isOn
-                    intervencionQuirurgica.fechaListaEspera = fechaListaEsperaText.text?.description == "" ? "1990-09-09".toDateFormat : listaEsperaFechaValue.toDateFormat
-                    intervencionQuirurgica.preanestesiaRealizada = preanestesiaRealizada.isOn
-                    intervencionQuirurgica.fechaPreanestesia = fechaPreanestesiaText.text?.description == "" ? "1990-09-09".toDateFormat : preanestesiaFechaValue.toDateFormat
-                    intervencionQuirurgica.notasPreanestesia = preanestesiaNotasText.text.description
-                    realm.add(intervencionQuirurgica)
+            if isNewNHistoria(nHistoria: nHistoriaTextField.text!){
+                let paciente: Paciente = Paciente()
+                let intervencionQuirurgica: IntervencionQuirurgica = IntervencionQuirurgica()
+                let revisar: Revisar = Revisar()
+                let siguienteCita: SiguienteCita = SiguienteCita()
+                try! realm.write {
+                    ///INFORMACION GENERAL
+                    paciente.numeroHistoria = nHistoriaTextField.text!
+                    paciente.nombre = nombreTextField.text!
+                    paciente.patologia = patologia.title(for: UIControlState.normal)!
+                    realm.add(paciente)
+                    
+                    ///IQ
+                    if(intervencionSwitch.isOn){
+                        intervencionQuirurgica.id = nHistoriaTextField.text!
+                        intervencionQuirurgica.idIQ = 0
+                        intervencionQuirurgica.intervencionQuirurgica = intervencionSwitch.isOn
+                        intervencionQuirurgica.tipoIntervencion = tipoIntervencionButton.title(for: UIControlState.normal)!
+                        intervencionQuirurgica.fechaIntervencion = fechaIntervencionText.text?.description == "" ? "1990-09-09".toDateFormat : intervencionFechaValue.toDateFormat
+                        intervencionQuirurgica.recordarIntervencion = recordarIntervencionSwitch.isOn
+                        intervencionQuirurgica.notasIntervencionQuirurgica = notasIntervencionTexto.text.description
+                        intervencionQuirurgica.intervenido = operadoSwitch.isOn
+                        intervencionQuirurgica.fechaListaEspera = fechaListaEsperaText.text?.description == "" ? "1990-09-09".toDateFormat : listaEsperaFechaValue.toDateFormat
+                        intervencionQuirurgica.preanestesiaRealizada = preanestesiaRealizada.isOn
+                        intervencionQuirurgica.fechaPreanestesia = fechaPreanestesiaText.text?.description == "" ? "1990-09-09".toDateFormat : preanestesiaFechaValue.toDateFormat
+                        intervencionQuirurgica.notasPreanestesia = preanestesiaNotasText.text.description
+                        realm.add(intervencionQuirurgica)
+                    }
+                    
+                    //PRUEBAS
+                    for (i,prueba) in pruebasArray.enumerated(){
+                        let pruebaRealm: Prueba = Prueba()
+                        pruebaRealm.idPrueba = i
+                        pruebaRealm.id = nHistoriaTextField.text!
+                        pruebaRealm.tipoPrueba = prueba.tipo
+                        pruebaRealm.recordarPrueba = prueba.recordar
+                        if(prueba.recordar){pruebaRealm.fechaPrueba = formatterSave.string(from: prueba.fecha).toDateFormat}else{pruebaRealm.fechaPrueba = "1990-09-09".toDateFormat}
+                        realm.add(pruebaRealm)
+                    }
+                    
+                    //REVISAR
+                    if(revisarSwitch.isOn){
+                        revisar.idRevisar = 0
+                        revisar.id = nHistoriaTextField.text!
+                        revisar.revisar = revisarSwitch.isOn
+                        revisar.notasRevisar = notasRevisar.text.description
+                        revisar.recordarRevisar = recordarRevisar.isOn
+                        revisar.fechaRevisar = fechaRevisarValue.description == "" ? "1990-09-09".toDateFormat : fechaRevisarValue.toDateFormat
+                        realm.add(revisar)
+                    }
+                    
+                    //SIGUIENTE CITA
+                    if(siguienteCitaSwitch.isOn){
+                        siguienteCita.idCita = 0
+                        siguienteCita.id = nHistoriaTextField.text!
+                        siguienteCita.siguienteCita = siguienteCitaSwitch.isOn
+                        siguienteCita.notasSiguienteCita = siguienteCitaNotasText.text
+                        siguienteCita.recordarSiguienteCita = siguienteCitaRecordarSwitch.isOn
+                        siguienteCita.fechaSiguienteCita = siguienteCitaRecordarFecha.text?.description == "" ? "1990-09-09".toDateFormat : siguienteFechaValue.toDateFormat
+                        realm.add(siguienteCita)
+                    }
+                    
+                    cleanForm()
+                    print("guardado")
+                    self.tabBarController?.selectedIndex = 0
                 }
-                
-                //PRUEBAS
-                for (i,prueba) in pruebasArray.enumerated(){
-                    let pruebaRealm: Prueba = Prueba()
-                    pruebaRealm.idPrueba = i
-                    pruebaRealm.id = nHistoriaTextField.text!
-                    pruebaRealm.tipoPrueba = prueba.tipo
-                    pruebaRealm.recordarPrueba = prueba.recordar
-                    if(prueba.recordar){pruebaRealm.fechaPrueba = formatterSave.string(from: prueba.fecha).toDateFormat}else{pruebaRealm.fechaPrueba = "1990-09-09".toDateFormat}
-                    realm.add(pruebaRealm)
-                }
-                
-                //REVISAR
-                if(revisarSwitch.isOn){
-                    revisar.idRevisar = 0
-                    revisar.id = nHistoriaTextField.text!
-                    revisar.revisar = revisarSwitch.isOn
-                    revisar.notasRevisar = notasRevisar.text.description
-                    revisar.recordarRevisar = recordarRevisar.isOn
-                    revisar.fechaRevisar = fechaRevisarValue.description == "" ? "1990-09-09".toDateFormat : fechaRevisarValue.toDateFormat
-                    realm.add(revisar)
-                }
-                
-                //SIGUIENTE CITA
-                if(siguienteCitaSwitch.isOn){
-                    siguienteCita.idCita = 0
-                    siguienteCita.id = nHistoriaTextField.text!
-                    siguienteCita.siguienteCita = siguienteCitaSwitch.isOn
-                    siguienteCita.notasSiguienteCita = siguienteCitaNotasText.text
-                    siguienteCita.recordarSiguienteCita = siguienteCitaRecordarSwitch.isOn
-                    siguienteCita.fechaSiguienteCita = siguienteCitaRecordarFecha.text?.description == "" ? "1990-09-09".toDateFormat : siguienteFechaValue.toDateFormat
-                    realm.add(siguienteCita)
-                }
-                
-                cleanForm()
-                print("guardado")
-                self.tabBarController?.selectedIndex = 0
             }
+            
         } else {
-            showAlert(mensaje: "Para poder guardar un nuevo paciente tienes que asignarle un número de historia")
+            showAlert(mensaje: "Para poder guardar un nuevo paciente tienes que asignarle un ID")
         }
+    }
+    
+    func isNewNHistoria(nHistoria: String) -> Bool{
+        let pacientes = realm.objects(Paciente.self)
+        for paciente in pacientes{
+            if paciente.numeroHistoria == nHistoria {
+                showAlert(mensaje: "Este ID ya ha sido utilizado")
+                return false
+            }
+        }
+        return true
     }
 }
 
