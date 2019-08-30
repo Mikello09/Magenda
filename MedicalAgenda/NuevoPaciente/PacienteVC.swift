@@ -1271,7 +1271,7 @@ class PacienteVC: BaseViewController, PatologiaSelected, UITableViewDelegate, UI
         nombreTextField.text = ""
         patologia.setTitle("Ninguna", for: .normal)
         ///IQ
-        intervencionSwitch.setOn(false, animated: true)
+        intervencionSwitch.setOn(false, animated: false)
         tipoIntervencionButton.setTitle("Ninguna", for: .normal)
         fechaIntervencionText.text = ""
         fechaIntervencionText.isHidden = true
@@ -1333,11 +1333,11 @@ class PacienteVC: BaseViewController, PatologiaSelected, UITableViewDelegate, UI
         self.siguienteCitaView.removeArrangedSubview(siguienteCitaRecordarView)
         siguienteCitaRecordarView.removeFromSuperview()
         
-        operadoSwitch.isOn = true
+        operadoSwitch.setOn(false, animated: true)
         //mainScroll.setContentOffset(.zero, animated: true)
         
         self.pruebasAltura.constant = 50
-        self.mainHeight.constant = 600
+        self.mainHeight.constant = 500
         
     }
     
