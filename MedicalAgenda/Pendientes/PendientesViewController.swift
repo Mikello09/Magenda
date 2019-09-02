@@ -36,7 +36,7 @@ class PendientesViewController: BaseViewController, UITableViewDelegate, UITable
         arrayPendientes = presenter.getPendientesItems()
         if(arrayPendientes.count > 0){
             tabla.isHidden = false
-            arrayPendientes = arrayPendientes.sorted(by: { $0.fecha < $1.fecha })
+            if arrayPendientes.count > 1 {arrayPendientes = arrayPendientes.sorted(by: { $0.fecha < $1.fecha })}
             noIconImage.isHidden = true
             tabla.reloadData()
         }else{
@@ -56,7 +56,6 @@ class PendientesViewController: BaseViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         
         switch arrayPendientes[indexPath.row].codigo{
         case CodigoTarea.ListaEspera:

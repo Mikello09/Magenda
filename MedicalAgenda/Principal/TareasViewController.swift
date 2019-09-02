@@ -78,7 +78,7 @@ class TareasViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     notas: "" ,
                     visto: lista.vistoListaEspera,
                     codigo: CodigoTarea.ListaEspera)
-                seleccionArray.append(seleccion)
+                if lista.recordarIntervencion{seleccionArray.append(seleccion)}
             }
         }
         if(preanestesia.count > 0){
@@ -91,7 +91,7 @@ class TareasViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     notas: prea.notasPreanestesia,
                     visto: prea.vistoPreanestesia,
                     codigo: CodigoTarea.Preanestesia)
-                seleccionArray.append(seleccion)
+                if prea.recordarIntervencion{seleccionArray.append(seleccion)}
             }
         }
         if(intervencion.count > 0){
@@ -104,7 +104,7 @@ class TareasViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     notas: inter.notasIntervencionQuirurgica,
                     visto: inter.vistoIQ,
                     codigo: CodigoTarea.IQ)
-                seleccionArray.append(seleccion)
+                if inter.recordarIntervencion{seleccionArray.append(seleccion)}
             }
         }
         if(prueba.count > 0){
@@ -117,7 +117,7 @@ class TareasViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     notas: "",
                     visto: pr.pruebaVisto,
                     codigo: CodigoTarea.Prueba)
-                seleccionArray.append(seleccion)
+                if pr.recordarPrueba{seleccionArray.append(seleccion)}
             }
         }
         if(revisar.count > 0){
@@ -130,7 +130,7 @@ class TareasViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     notas: rv.notasRevisar,
                     visto: rv.revisarVisto,
                     codigo: CodigoTarea.Revisar)
-                seleccionArray.append(seleccion)
+                if rv.recordarRevisar{seleccionArray.append(seleccion)}
             }
         }
         if(siguienteCita.count > 0){
@@ -143,7 +143,7 @@ class TareasViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     notas: sg.notasSiguienteCita,
                     visto: sg.siguienteCitaVisto,
                     codigo: CodigoTarea.SiguienteCita)
-                seleccionArray.append(seleccion)
+                if sg.recordarSiguienteCita{seleccionArray.append(seleccion)}
             }
         }
         if(seleccionArray.count > 0){

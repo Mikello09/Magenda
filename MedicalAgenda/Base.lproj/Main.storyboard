@@ -3537,7 +3537,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qow-OF-ZL1">
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qow-OF-ZL1">
                                                         <rect key="frame" x="310" y="7" width="51" height="31"/>
                                                         <connections>
                                                             <action selector="intervenidoSwitchClicked:" destination="DhP-7w-h6x" eventType="valueChanged" id="w0K-Md-22B"/>
@@ -3553,7 +3553,7 @@
                                                     <constraint firstItem="qow-OF-ZL1" firstAttribute="centerY" secondItem="WJj-VF-8tz" secondAttribute="centerY" id="qmO-U6-XHh"/>
                                                 </constraints>
                                             </view>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1z9-PH-DCZ">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1z9-PH-DCZ">
                                                 <rect key="frame" x="0.0" y="280" width="375" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha lista espera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEH-4l-oh6">
@@ -3591,7 +3591,7 @@
                                                     <constraint firstItem="JEf-yE-aL4" firstAttribute="centerY" secondItem="1z9-PH-DCZ" secondAttribute="centerY" id="xpk-NM-M0X"/>
                                                 </constraints>
                                             </view>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgA-H1-D2K">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgA-H1-D2K">
                                                 <rect key="frame" x="0.0" y="325" width="375" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preanestesia realizada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOL-90-aJX">
@@ -3616,7 +3616,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="kpK-UF-Vbx" secondAttribute="trailing" constant="16" id="mhx-Vq-43K"/>
                                                 </constraints>
                                             </view>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XkL-3C-s4R">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XkL-3C-s4R">
                                                 <rect key="frame" x="0.0" y="370" width="375" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha preanestesia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNg-gn-gi0">
@@ -3654,7 +3654,7 @@
                                                     <constraint firstItem="K6D-WL-dge" firstAttribute="centerY" secondItem="XkL-3C-s4R" secondAttribute="centerY" id="zgL-Ih-C6b"/>
                                                 </constraints>
                                             </view>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lVQ-nA-pyU">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lVQ-nA-pyU">
                                                 <rect key="frame" x="0.0" y="415" width="375" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-kU-YDA">

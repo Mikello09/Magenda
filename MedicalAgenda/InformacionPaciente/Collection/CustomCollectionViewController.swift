@@ -159,26 +159,31 @@ extension CustomCollectionViewController: UICollectionViewDelegateFlowLayout, UI
         switch items[indexPath.row].tipo {
         case .patologia:
             self.tablaPatologias = cell.tabla
+            cell.tabla.allowsSelection = false
             cell.title.textColor = colorPatologia
             cell.anadirButton.setBackgroundImage(UIImage(named: "add_patologia"), for: .normal)
             break
         case .iq:
             self.tablaIQ = cell.tabla
+            cell.tabla.allowsSelection = true
             cell.title.textColor = colorIQ
             cell.anadirButton.setBackgroundImage(UIImage(named: "add_iq"), for: .normal)
             break
         case .prueba:
             self.tablaPruebas = cell.tabla
+            cell.tabla.allowsSelection = true
             cell.title.textColor = colorPrueba
             cell.anadirButton.setBackgroundImage(UIImage(named: "add_prueba"), for: .normal)
             break
         case .revisar:
             self.tablaRevisar = cell.tabla
+            cell.tabla.allowsSelection = true
             cell.title.textColor = colorRevisar
             cell.anadirButton.setBackgroundImage(UIImage(named: "add_revisar"), for: .normal)
             break
         case .siguienteCita:
             self.tablaCita = cell.tabla
+            cell.tabla.allowsSelection = true
             cell.title.textColor = colorSiguienteCita
             cell.anadirButton.setBackgroundImage(UIImage(named: "add_cita"), for: .normal)
             break

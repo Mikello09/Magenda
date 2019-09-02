@@ -1286,6 +1286,9 @@ class PacienteVC: BaseViewController, PatologiaSelected, UITableViewDelegate, UI
         fechaPreanestesiaText.isHidden = true
         calendarIconPreanestesia.isHidden = false
         preanestesiaNotasText.text = ""
+        listaEsperaFechaValue = ""
+        preanestesiaFechaValue = ""
+        intervencionFechaValue = ""
         ///PRUEBAS
         pruebasArray.removeAll()
         pruebasTabla.reloadData()
@@ -1295,12 +1298,14 @@ class PacienteVC: BaseViewController, PatologiaSelected, UITableViewDelegate, UI
         recordarRevisar.setOn(false, animated: true)
         fechaRevisar.text = ""
         fechaRevisar.isHidden = true
+        fechaRevisarValue = ""
         calendarioRevisar.isHidden = false
         recordarRevisarCheck()
         ///SIGUIENTE CITA
         siguienteCitaSwitch.setOn(false, animated: true)
         siguienteCitaNotasText.text = ""
         siguienteCitaRecordarFecha.text = ""
+        siguienteFechaValue = ""
         siguienteCitaRecordarFecha.isHidden = true
         siguienteCitaRecordarCalendario.isHidden = false
         siguienteCitaRecordarCheck()
