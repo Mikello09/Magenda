@@ -25,16 +25,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Not first launch.")
         } else {
             let realm = try! Realm()
-            try! realm.write {
-                let patologia = Patologias()
-                patologia.valor = "Ninguna"
-                realm.add(patologia)
-                let pruebas1 = PruebasRealm()
-                pruebas1.valor = "Ninguna"
-                realm.add(pruebas1)
-                let iq1 = IQRealm()
-                iq1.valor = "Ninguna"
-                realm.add(iq1)
+            do {
+                try realm.write {
+                    let patologia = Patologias()
+                    patologia.valor = "Ninguna"
+                    realm.add(patologia)
+                    let pruebas1 = PruebasRealm()
+                    pruebas1.valor = "Ninguna"
+                    realm.add(pruebas1)
+                    let iq1 = IQRealm()
+                    iq1.valor = "Ninguna"
+                    realm.add(iq1)
+                }
+            } catch{
+                print("Error creando base de datos")
             }
             UserDefaults.standard.set(true, forKey: "launchedBefore")
         }

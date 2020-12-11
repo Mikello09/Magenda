@@ -8,7 +8,7 @@ target 'MedicalAgenda' do
   # Pods for MedicalAgenda
   pod 'VACalendar'
   pod 'RAGTextField'
-  pod 'RealmSwift'
+  pod 'RealmSwift', '~> 4.4.1'
   pod 'Alamofire'
   pod 'Firebase/Analytics'
 

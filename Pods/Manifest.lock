@@ -64,18 +64,18 @@ PODS:
   - nanopb/encode (2.30906.0)
   - PromisesObjC (1.2.11)
   - RAGTextField (0.11.0)
-  - Realm (3.13.1):
-    - Realm/Headers (= 3.13.1)
-  - Realm/Headers (3.13.1)
-  - RealmSwift (3.13.1):
-    - Realm (= 3.13.1)
+  - Realm (4.4.1):
+    - Realm/Headers (= 4.4.1)
+  - Realm/Headers (4.4.1)
+  - RealmSwift (4.4.1):
+    - Realm (= 4.4.1)
   - VACalendar (1.3)
 
 DEPENDENCIES:
   - Alamofire
   - Firebase/Analytics
   - RAGTextField
-  - RealmSwift
+  - RealmSwift (~> 4.4.1)
   - VACalendar
 
 SPEC REPOS:
@@ -109,10 +109,10 @@ SPEC CHECKSUMS:
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   RAGTextField: 4ec9040029cff46bbeaa2ed4d19590a411397997
-  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
-  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+  Realm: 4eb04d7487bd43c0581256f40b424eafb711deff
+  RealmSwift: 3eb8924ff7100df5928c7602f71d0fec51e7c9c5
   VACalendar: 3e5a001cbf437ebed2bcfc747f3187e555d65175
 
-PODFILE CHECKSUM: ec0b5915b2e71aa320a175e04b30a92cc633c64a
+PODFILE CHECKSUM: 824ca9f67ccba6efaaf0a83229cbb37462050094
 
 COCOAPODS: 1.10.0
