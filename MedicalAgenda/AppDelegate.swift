@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import UserNotifications
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -47,6 +48,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         UNUserNotificationCenter.current().delegate = self
+        
+        //FIREBASE ANALYTICS
+        FirebaseApp.configure()
+        
         return true
     }
     

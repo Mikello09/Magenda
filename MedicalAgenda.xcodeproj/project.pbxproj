@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6DAD6003312866C184EA2827 /* Pods_MedicalAgenda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFDC0A76A7D55F18FAB16B7 /* Pods_MedicalAgenda.framework */; };
+		84928505258347790009B5E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84928504258347790009B5E6 /* GoogleService-Info.plist */; };
 		C3593606227F3E0A00765C89 /* PatologiaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3593605227F3E0A00765C89 /* PatologiaTableViewCell.swift */; };
 		C3593608228CAE4E00765C89 /* TareasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3593607228CAE4E00765C89 /* TareasViewController.swift */; };
 		C359360A228CB9B400765C89 /* TareasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3593609228CB9B400765C89 /* TareasTableViewCell.swift */; };
@@ -101,6 +102,7 @@
 /* Begin PBXFileReference section */
 		2ECB07452B1FDC61AFED6DFD /* Pods-MedicalAgenda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalAgenda.release.xcconfig"; path = "Target Support Files/Pods-MedicalAgenda/Pods-MedicalAgenda.release.xcconfig"; sourceTree = "<group>"; };
 		558395A0955E92BF8A6F40EA /* Pods-MedicalAgenda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedicalAgenda.debug.xcconfig"; path = "Target Support Files/Pods-MedicalAgenda/Pods-MedicalAgenda.debug.xcconfig"; sourceTree = "<group>"; };
+		84928504258347790009B5E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAFDC0A76A7D55F18FAB16B7 /* Pods_MedicalAgenda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedicalAgenda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34033C222664973003919BA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3593605227F3E0A00765C89 /* PatologiaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatologiaTableViewCell.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				C3D33CBC223C254D005173AD /* Assets.xcassets */,
 				C3D33CBE223C254D005173AD /* LaunchScreen.storyboard */,
 				C34033C222664973003919BA /* Info.plist */,
+				84928504258347790009B5E6 /* GoogleService-Info.plist */,
 			);
 			path = MedicalAgenda;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				F27B5193229FF1CB00CD1641 /* Header.xib in Resources */,
 				F2BDAFD122C3673E009111C6 /* IntervencionSlide.xib in Resources */,
 				C3D33CBD223C254D005173AD /* Assets.xcassets in Resources */,
+				84928505258347790009B5E6 /* GoogleService-Info.plist in Resources */,
 				F2C3F6DF22CB43B9004A439C /* CitaSlide.xib in Resources */,
 				F2BDAFD322C383FF009111C6 /* HeaderWithDetail.xib in Resources */,
 				F2C3F6D922CA52ED004A439C /* RevisionSlide.xib in Resources */,

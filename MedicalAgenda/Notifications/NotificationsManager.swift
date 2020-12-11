@@ -86,12 +86,12 @@ class NotificationsManager{
         let preferences = UserDefaults.standard
         let timeTypeKey = "notiTime"
         if preferences.object(forKey: timeTypeKey) == nil {
-            return Calendar.current.date(bySettingHour: 8, minute: 0, second: 0, of: fecha)!
+            return Calendar.current.date(bySettingHour: 8, minute: 0, second: 0, of: fecha) ?? Date()
         } else {
-            let timeValue = preferences.string(forKey: timeTypeKey)!
-            let hour: Int = Int(timeValue.components(separatedBy: ":")[0])!
-            let minute: Int = Int(timeValue.components(separatedBy: ":")[1])!
-            return Calendar.current.date(bySettingHour: hour, minute: minute, second: 0, of: fecha)!
+            let timeValue = preferences.string(forKey: timeTypeKey) ?? ""
+            let hour: Int = Int(timeValue.components(separatedBy: ":")[0]) ?? 0
+            let minute: Int = Int(timeValue.components(separatedBy: ":")[1]) ?? 0
+            return Calendar.current.date(bySettingHour: hour, minute: minute, second: 0, of: fecha) ?? Date()
         }
     }
 }

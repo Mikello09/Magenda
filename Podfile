@@ -10,6 +10,7 @@ target 'MedicalAgenda' do
   pod 'RAGTextField'
   pod 'RealmSwift'
   pod 'Alamofire'
+  pod 'Firebase/Analytics'
 
 end
 
